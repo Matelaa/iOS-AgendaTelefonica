@@ -2,3 +2,6 @@
 
 "login.cadastrar" = "Cadastrar";
 "login.entrar" = "Entrar";
+"login.email" = "Email";
+"login.senha" = "Senha";
+

@@ -10,6 +10,10 @@
 		2E89EC1C3ACAC7EF499DEE82 /* Pods_AgendaTelefonica.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8471273067B67CBED1781775 /* Pods_AgendaTelefonica.framework */; };
 		83034B4620FF66CC004D305F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 83034B4520FF66CC004D305F /* Localizable.strings */; };
 		83034B4820FF673C004D305F /* Colors.json in Resources */ = {isa = PBXBuildFile; fileRef = 83034B4720FF673C004D305F /* Colors.json */; };
+		83034B4E20FF6BAC004D305F /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83034B4A20FF6BAC004D305F /* Colors.swift */; };
+		83034B4F20FF6BAC004D305F /* Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83034B4B20FF6BAC004D305F /* Storyboard.swift */; };
+		83034B5020FF6BAC004D305F /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83034B4C20FF6BAC004D305F /* Assets.swift */; };
+		83034B5120FF6BAC004D305F /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83034B4D20FF6BAC004D305F /* Localizable.swift */; };
 		83F2917D20FE3A7400ACCCF9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F2917C20FE3A7400ACCCF9 /* AppDelegate.swift */; };
 		83F2917F20FE3A7400ACCCF9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F2917E20FE3A7400ACCCF9 /* ViewController.swift */; };
 		83F2918220FE3A7400ACCCF9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83F2918020FE3A7400ACCCF9 /* Main.storyboard */; };
@@ -20,6 +24,10 @@
 /* Begin PBXFileReference section */
 		83034B4520FF66CC004D305F /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		83034B4720FF673C004D305F /* Colors.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Colors.json; sourceTree = "<group>"; };
+		83034B4A20FF6BAC004D305F /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		83034B4B20FF6BAC004D305F /* Storyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storyboard.swift; sourceTree = "<group>"; };
+		83034B4C20FF6BAC004D305F /* Assets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
+		83034B4D20FF6BAC004D305F /* Localizable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Localizable.swift; sourceTree = "<group>"; };
 		83F2917920FE3A7400ACCCF9 /* AgendaTelefonica.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AgendaTelefonica.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83F2917C20FE3A7400ACCCF9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		83F2917E20FE3A7400ACCCF9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -128,6 +136,10 @@
 		83034B4420FF6563004D305F /* Generated */ = {
 			isa = PBXGroup;
 			children = (
+				83034B4C20FF6BAC004D305F /* Assets.swift */,
+				83034B4A20FF6BAC004D305F /* Colors.swift */,
+				83034B4D20FF6BAC004D305F /* Localizable.swift */,
+				83034B4B20FF6BAC004D305F /* Storyboard.swift */,
 			);
 			path = Generated;
 			sourceTree = "<group>";
@@ -174,6 +186,7 @@
 			buildConfigurationList = 83F2918B20FE3A7B00ACCCF9 /* Build configuration list for PBXNativeTarget "AgendaTelefonica" */;
 			buildPhases = (
 				FE91E6EA780C7480C05B5B31 /* [CP] Check Pods Manifest.lock */,
+				83034B4920FF69BB004D305F /* SwiftGen */,
 				83F2917520FE3A7400ACCCF9 /* Sources */,
 				83F2917620FE3A7400ACCCF9 /* Frameworks */,
 				83F2917720FE3A7400ACCCF9 /* Resources */,
@@ -236,6 +249,20 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		83034B4920FF69BB004D305F /* SwiftGen */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = SwiftGen;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT\"/SwiftGen/bin/swiftgen strings -t structured-swift3 \"$PROJECT_DIR/$PROJECT_NAME/Application/Supporting Files/Generators/Localizable.strings\" --output \"$PROJECT_DIR/$PROJECT_NAME/Application/Supporting Files/Generated/Localizable.swift\"\n\n\"$PODS_ROOT\"/SwiftGen/bin/swiftgen xcassets -t swift3 \"$PROJECT_DIR/$PROJECT_NAME/Application/Supporting Files/Assets.xcassets\" --output \"$PROJECT_DIR/$PROJECT_NAME/Application/Supporting Files/Generated/Assets.swift\"\n\n\"$PODS_ROOT\"/SwiftGen/bin/swiftgen colors -t swift3 \"$PROJECT_DIR/$PROJECT_NAME/Application/Supporting Files/Generators/Colors.json\" --output \"$PROJECT_DIR/$PROJECT_NAME/Application/Supporting Files/Generated/Colors.swift\"\n\n\"$PODS_ROOT\"/SwiftGen/bin/swiftgen storyboards -t swift3 \"$PROJECT_DIR/$PROJECT_NAME\" --output \"$PROJECT_DIR/$PROJECT_NAME/Application/Supporting Files/Generated/Storyboard.swift\"";
+		};
 		FE91E6EA780C7480C05B5B31 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -261,7 +288,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83034B4F20FF6BAC004D305F /* Storyboard.swift in Sources */,
 				83F2917F20FE3A7400ACCCF9 /* ViewController.swift in Sources */,
+				83034B4E20FF6BAC004D305F /* Colors.swift in Sources */,
+				83034B5020FF6BAC004D305F /* Assets.swift in Sources */,
+				83034B5120FF6BAC004D305F /* Localizable.swift in Sources */,
 				83F2917D20FE3A7400ACCCF9 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
