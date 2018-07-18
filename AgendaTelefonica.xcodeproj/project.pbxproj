@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E89EC1C3ACAC7EF499DEE82 /* Pods_AgendaTelefonica.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8471273067B67CBED1781775 /* Pods_AgendaTelefonica.framework */; };
+		83034B4620FF66CC004D305F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 83034B4520FF66CC004D305F /* Localizable.strings */; };
+		83034B4820FF673C004D305F /* Colors.json in Resources */ = {isa = PBXBuildFile; fileRef = 83034B4720FF673C004D305F /* Colors.json */; };
 		83F2917D20FE3A7400ACCCF9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F2917C20FE3A7400ACCCF9 /* AppDelegate.swift */; };
 		83F2917F20FE3A7400ACCCF9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F2917E20FE3A7400ACCCF9 /* ViewController.swift */; };
 		83F2918220FE3A7400ACCCF9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83F2918020FE3A7400ACCCF9 /* Main.storyboard */; };
@@ -15,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		83034B4520FF66CC004D305F /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		83034B4720FF673C004D305F /* Colors.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Colors.json; sourceTree = "<group>"; };
 		83F2917920FE3A7400ACCCF9 /* AgendaTelefonica.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AgendaTelefonica.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83F2917C20FE3A7400ACCCF9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		83F2917E20FE3A7400ACCCF9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +27,9 @@
 		83F2918320FE3A7B00ACCCF9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		83F2918620FE3A7B00ACCCF9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		83F2918820FE3A7B00ACCCF9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8471273067B67CBED1781775 /* Pods_AgendaTelefonica.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AgendaTelefonica.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC4B4AA3BA9991A2FA834039 /* Pods-AgendaTelefonica.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AgendaTelefonica.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AgendaTelefonica/Pods-AgendaTelefonica.debug.xcconfig"; sourceTree = "<group>"; };
+		F82119A18AEAE5246D6A77B0 /* Pods-AgendaTelefonica.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AgendaTelefonica.release.xcconfig"; path = "Pods/Target Support Files/Pods-AgendaTelefonica/Pods-AgendaTelefonica.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,12 +37,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E89EC1C3ACAC7EF499DEE82 /* Pods_AgendaTelefonica.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4C1525648AAA49857E6B270A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CC4B4AA3BA9991A2FA834039 /* Pods-AgendaTelefonica.debug.xcconfig */,
+				F82119A18AEAE5246D6A77B0 /* Pods-AgendaTelefonica.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		83034B3C20FF5CA3004D305F /* Application */ = {
 			isa = PBXGroup;
 			children = (
@@ -48,6 +66,8 @@
 		83034B3D20FF5CFE004D305F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				83034B4420FF6563004D305F /* Generated */,
+				83034B4320FF655A004D305F /* Generators */,
 				83F2918320FE3A7B00ACCCF9 /* Assets.xcassets */,
 				83F2918520FE3A7B00ACCCF9 /* LaunchScreen.storyboard */,
 				83F2918820FE3A7B00ACCCF9 /* Info.plist */,
@@ -58,10 +78,58 @@
 		83034B3E20FF5D28004D305F /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				83F2917E20FE3A7400ACCCF9 /* ViewController.swift */,
 				83F2918020FE3A7400ACCCF9 /* Main.storyboard */,
+				83034B3F20FF64C5004D305F /* Model */,
+				83034B4020FF64D4004D305F /* ViewModel */,
+				83034B4120FF64EB004D305F /* Service */,
+				83034B4220FF64F9004D305F /* Controllers */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		83034B3F20FF64C5004D305F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		83034B4020FF64D4004D305F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		83034B4120FF64EB004D305F /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		83034B4220FF64F9004D305F /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				83F2917E20FE3A7400ACCCF9 /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		83034B4320FF655A004D305F /* Generators */ = {
+			isa = PBXGroup;
+			children = (
+				83034B4520FF66CC004D305F /* Localizable.strings */,
+				83034B4720FF673C004D305F /* Colors.json */,
+			);
+			path = Generators;
+			sourceTree = "<group>";
+		};
+		83034B4420FF6563004D305F /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Generated;
 			sourceTree = "<group>";
 		};
 		83F2917020FE3A7400ACCCF9 = {
@@ -69,6 +137,8 @@
 			children = (
 				83F2917B20FE3A7400ACCCF9 /* AgendaTelefonica */,
 				83F2917A20FE3A7400ACCCF9 /* Products */,
+				4C1525648AAA49857E6B270A /* Pods */,
+				938F6895DE6346719B9E85FE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -88,6 +158,14 @@
 			path = AgendaTelefonica;
 			sourceTree = "<group>";
 		};
+		938F6895DE6346719B9E85FE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8471273067B67CBED1781775 /* Pods_AgendaTelefonica.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -95,6 +173,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 83F2918B20FE3A7B00ACCCF9 /* Build configuration list for PBXNativeTarget "AgendaTelefonica" */;
 			buildPhases = (
+				FE91E6EA780C7480C05B5B31 /* [CP] Check Pods Manifest.lock */,
 				83F2917520FE3A7400ACCCF9 /* Sources */,
 				83F2917620FE3A7400ACCCF9 /* Frameworks */,
 				83F2917720FE3A7400ACCCF9 /* Resources */,
@@ -147,12 +226,35 @@
 			buildActionMask = 2147483647;
 			files = (
 				83F2918720FE3A7B00ACCCF9 /* LaunchScreen.storyboard in Resources */,
+				83034B4820FF673C004D305F /* Colors.json in Resources */,
+				83034B4620FF66CC004D305F /* Localizable.strings in Resources */,
 				83F2918420FE3A7B00ACCCF9 /* Assets.xcassets in Resources */,
 				83F2918220FE3A7400ACCCF9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		FE91E6EA780C7480C05B5B31 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AgendaTelefonica-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		83F2917520FE3A7400ACCCF9 /* Sources */ = {
@@ -302,6 +404,7 @@
 		};
 		83F2918C20FE3A7B00ACCCF9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CC4B4AA3BA9991A2FA834039 /* Pods-AgendaTelefonica.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -319,6 +422,7 @@
 		};
 		83F2918D20FE3A7B00ACCCF9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F82119A18AEAE5246D6A77B0 /* Pods-AgendaTelefonica.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
