@@ -35,6 +35,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		83034B3C20FF5CA3004D305F /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				83F2917C20FE3A7400ACCCF9 /* AppDelegate.swift */,
+				83034B3D20FF5CFE004D305F /* Supporting Files */,
+				83034B3E20FF5D28004D305F /* Login */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		83034B3D20FF5CFE004D305F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				83F2918320FE3A7B00ACCCF9 /* Assets.xcassets */,
+				83F2918520FE3A7B00ACCCF9 /* LaunchScreen.storyboard */,
+				83F2918820FE3A7B00ACCCF9 /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		83034B3E20FF5D28004D305F /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				83F2917E20FE3A7400ACCCF9 /* ViewController.swift */,
+				83F2918020FE3A7400ACCCF9 /* Main.storyboard */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
 		83F2917020FE3A7400ACCCF9 = {
 			isa = PBXGroup;
 			children = (
@@ -54,12 +83,7 @@
 		83F2917B20FE3A7400ACCCF9 /* AgendaTelefonica */ = {
 			isa = PBXGroup;
 			children = (
-				83F2917C20FE3A7400ACCCF9 /* AppDelegate.swift */,
-				83F2917E20FE3A7400ACCCF9 /* ViewController.swift */,
-				83F2918020FE3A7400ACCCF9 /* Main.storyboard */,
-				83F2918320FE3A7B00ACCCF9 /* Assets.xcassets */,
-				83F2918520FE3A7B00ACCCF9 /* LaunchScreen.storyboard */,
-				83F2918820FE3A7B00ACCCF9 /* Info.plist */,
+				83034B3C20FF5CA3004D305F /* Application */,
 			);
 			path = AgendaTelefonica;
 			sourceTree = "<group>";
@@ -281,7 +305,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = AgendaTelefonica/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/AgendaTelefonica/Application/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -298,7 +322,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = AgendaTelefonica/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/AgendaTelefonica/Application/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
