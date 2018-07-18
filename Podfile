@@ -5,5 +5,8 @@ target 'AgendaTelefonica' do
   use_frameworks!
 
 pod 'SwiftGen'
+pod 'Alamofire'
+pod 'ObjectMapper'
+pod 'AlamofireObjectMapper'
 
 end

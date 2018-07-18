@@ -21,6 +21,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.imagemIcone.image = Asset.iconeTelefone.image
+        
         self.txtEmail.placeholder = L10n.Login.email
         self.txtSenha.placeholder = L10n.Login.senha
         
