@@ -58,7 +58,8 @@ class ViewController: UIViewController {
 
 extension ViewController: LoginServiceDelegate {
     func postLoginSuccess() {
-        print("Logado com sucesso")
+        
+        self.perform(segue: StoryboardSegue.Main.segueEntrar)
     }
     
     func postLoginFailure(error: String) {

@@ -15,6 +15,6 @@ class LoginRequestFactory {
         
         let params: Parameters = ["email" : email, "password" : senha]
         
-        return Alamofire.request(baseUrl + "auth/sign_in", method: .put, parameters: params, encoding: JSONEncoding.default)
+        return Alamofire.request(baseUrl + "auth/sign_in", method: .post, parameters: params, encoding: JSONEncoding.default)
     }
 }

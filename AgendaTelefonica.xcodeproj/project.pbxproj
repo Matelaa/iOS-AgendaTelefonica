@@ -17,6 +17,13 @@
 		83034B5320FF742F004D305F /* LoginRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83034B5220FF742F004D305F /* LoginRequestFactory.swift */; };
 		83034B5520FF7457004D305F /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83034B5420FF7457004D305F /* LoginService.swift */; };
 		83277AA42100BBB40025F79F /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83277AA32100BBB40025F79F /* UserViewModel.swift */; };
+		83277AA62100C2E50025F79F /* SessionControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83277AA52100C2E50025F79F /* SessionControl.swift */; };
+		83277AA92100C48E0025F79F /* Contatos.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83277AA82100C48E0025F79F /* Contatos.storyboard */; };
+		83277AAF2100C4EF0025F79F /* ContatosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83277AAE2100C4EF0025F79F /* ContatosViewController.swift */; };
+		83277AB12100C5EF0025F79F /* Contato.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83277AB02100C5EF0025F79F /* Contato.swift */; };
+		83277AB32100CA6C0025F79F /* ContatoRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83277AB22100CA6C0025F79F /* ContatoRequestFactory.swift */; };
+		83277AB62100CA850025F79F /* ContatoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83277AB52100CA850025F79F /* ContatoService.swift */; };
+		83277AB82100D6920025F79F /* ContatosViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83277AB72100D6920025F79F /* ContatosViewModel.swift */; };
 		83DB6A1E20FF782F00D76CE3 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DB6A1D20FF782F00D76CE3 /* User.swift */; };
 		83F2917D20FE3A7400ACCCF9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F2917C20FE3A7400ACCCF9 /* AppDelegate.swift */; };
 		83F2917F20FE3A7400ACCCF9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F2917E20FE3A7400ACCCF9 /* ViewController.swift */; };
@@ -35,6 +42,13 @@
 		83034B5220FF742F004D305F /* LoginRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequestFactory.swift; sourceTree = "<group>"; };
 		83034B5420FF7457004D305F /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
 		83277AA32100BBB40025F79F /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = SOURCE_ROOT; };
+		83277AA52100C2E50025F79F /* SessionControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionControl.swift; sourceTree = "<group>"; };
+		83277AA82100C48E0025F79F /* Contatos.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Contatos.storyboard; sourceTree = "<group>"; };
+		83277AAE2100C4EF0025F79F /* ContatosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContatosViewController.swift; sourceTree = "<group>"; };
+		83277AB02100C5EF0025F79F /* Contato.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contato.swift; sourceTree = "<group>"; };
+		83277AB22100CA6C0025F79F /* ContatoRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContatoRequestFactory.swift; sourceTree = "<group>"; };
+		83277AB52100CA850025F79F /* ContatoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContatoService.swift; sourceTree = "<group>"; };
+		83277AB72100D6920025F79F /* ContatosViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContatosViewModel.swift; sourceTree = "<group>"; };
 		83DB6A1D20FF782F00D76CE3 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		83F2917920FE3A7400ACCCF9 /* AgendaTelefonica.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AgendaTelefonica.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83F2917C20FE3A7400ACCCF9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -73,8 +87,8 @@
 			isa = PBXGroup;
 			children = (
 				83F2917C20FE3A7400ACCCF9 /* AppDelegate.swift */,
+				83277AA52100C2E50025F79F /* SessionControl.swift */,
 				83034B3D20FF5CFE004D305F /* Supporting Files */,
-				83034B3E20FF5D28004D305F /* Login */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -156,6 +170,51 @@
 			path = Generated;
 			sourceTree = "<group>";
 		};
+		83277AA72100C44C0025F79F /* Listar Contatos */ = {
+			isa = PBXGroup;
+			children = (
+				83277AA82100C48E0025F79F /* Contatos.storyboard */,
+				83277AAA2100C4920025F79F /* Model */,
+				83277AAB2100C49F0025F79F /* ViewModel */,
+				83277AAC2100C4A70025F79F /* Service */,
+				83277AAD2100C4AD0025F79F /* Controller */,
+			);
+			path = "Listar Contatos";
+			sourceTree = "<group>";
+		};
+		83277AAA2100C4920025F79F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				83277AB02100C5EF0025F79F /* Contato.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		83277AAB2100C49F0025F79F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				83277AB72100D6920025F79F /* ContatosViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		83277AAC2100C4A70025F79F /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				83277AB22100CA6C0025F79F /* ContatoRequestFactory.swift */,
+				83277AB52100CA850025F79F /* ContatoService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		83277AAD2100C4AD0025F79F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				83277AAE2100C4EF0025F79F /* ContatosViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		83F2917020FE3A7400ACCCF9 = {
 			isa = PBXGroup;
 			children = (
@@ -178,6 +237,8 @@
 			isa = PBXGroup;
 			children = (
 				83034B3C20FF5CA3004D305F /* Application */,
+				83034B3E20FF5D28004D305F /* Login */,
+				83277AA72100C44C0025F79F /* Listar Contatos */,
 			);
 			path = AgendaTelefonica;
 			sourceTree = "<group>";
@@ -252,6 +313,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				83F2918720FE3A7B00ACCCF9 /* LaunchScreen.storyboard in Resources */,
+				83277AA92100C48E0025F79F /* Contatos.storyboard in Resources */,
 				83034B4820FF673C004D305F /* Colors.json in Resources */,
 				83034B4620FF66CC004D305F /* Localizable.strings in Resources */,
 				83F2918420FE3A7B00ACCCF9 /* Assets.xcassets in Resources */,
@@ -328,13 +390,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				83034B4F20FF6BAC004D305F /* Storyboard.swift in Sources */,
+				83277AB32100CA6C0025F79F /* ContatoRequestFactory.swift in Sources */,
 				83F2917F20FE3A7400ACCCF9 /* ViewController.swift in Sources */,
 				83034B5320FF742F004D305F /* LoginRequestFactory.swift in Sources */,
 				83277AA42100BBB40025F79F /* UserViewModel.swift in Sources */,
 				83034B4E20FF6BAC004D305F /* Colors.swift in Sources */,
+				83277AAF2100C4EF0025F79F /* ContatosViewController.swift in Sources */,
 				83034B5020FF6BAC004D305F /* Assets.swift in Sources */,
+				83277AA62100C2E50025F79F /* SessionControl.swift in Sources */,
+				83277AB82100D6920025F79F /* ContatosViewModel.swift in Sources */,
 				83DB6A1E20FF782F00D76CE3 /* User.swift in Sources */,
 				83034B5120FF6BAC004D305F /* Localizable.swift in Sources */,
+				83277AB12100C5EF0025F79F /* Contato.swift in Sources */,
+				83277AB62100CA850025F79F /* ContatoService.swift in Sources */,
 				83F2917D20FE3A7400ACCCF9 /* AppDelegate.swift in Sources */,
 				83034B5520FF7457004D305F /* LoginService.swift in Sources */,
 			);
