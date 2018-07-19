@@ -10,6 +10,9 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    // MARK: - Vars
+    var service: LoginService!
+    
     // MARK: - UI Elements
     @IBOutlet weak var imagemIcone: UIImageView!
     @IBOutlet weak var txtEmail: UITextField!
@@ -20,6 +23,8 @@ class ViewController: UIViewController {
     // MARK: - Life
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.service = LoginService(delegate: self)
         
         self.imagemIcone.image = Asset.iconeTelefone.image
         
@@ -36,8 +41,13 @@ class ViewController: UIViewController {
         
     }
     
+    // MARK: - Actions
     @IBAction func entrar(_ sender: Any) {
     
+        if let email = self.txtEmail.text, let senha = self.txtSenha.text {
+            
+            self.service.postLogin(email: email, senha: senha)
+        }
     }
     
     @IBAction func cadastrar(_ sender: Any) {
@@ -46,3 +56,12 @@ class ViewController: UIViewController {
     
 }
 
+extension ViewController: LoginServiceDelegate {
+    func postLoginSuccess() {
+        print("Logado com sucesso")
+    }
+    
+    func postLoginFailure(error: String) {
+        print(error)
+    }
+}
