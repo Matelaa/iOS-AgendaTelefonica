@@ -28,6 +28,9 @@ class ViewController: UIViewController {
         
         self.imagemIcone.image = Asset.iconeTelefone.image
         
+        self.txtEmail.text = "matela@gmail.com"
+        self.txtSenha.text = "12345678"
+        
         self.txtEmail.placeholder = L10n.Login.email
         self.txtSenha.placeholder = L10n.Login.senha
         

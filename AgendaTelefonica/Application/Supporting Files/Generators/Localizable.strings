@@ -6,3 +6,9 @@
 "login.senha" = "Senha";
 
 "contatos.title" = "Contatos";
+"contatos.novocontato" = "Novo Contato";
+"contatos.nome" = "Nome";
+"contatos.email" = "Email";
+"contatos.telefone" = "Telefone";
+"contatos.urlimagem" = "URL Imagem";
+"contatos.criar" = "Criar";

@@ -9,5 +9,7 @@ pod 'Alamofire'
 pod 'ObjectMapper'
 pod 'AlamofireObjectMapper'
 pod 'RealmSwift'
+pod 'Reusable'
+pod 'Kingfisher'
 
 end
