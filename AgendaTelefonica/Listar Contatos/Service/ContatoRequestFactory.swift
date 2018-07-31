@@ -15,7 +15,7 @@ class ContatoRequestFactory {
         
         let params: Parameters = ["name" : nome, "birth" : aniversario, "email" : email, "phone" : telefone, "picture" : avatar]
 
-        return Alamofire.request(baseUrl + "contacts", method: .get, parameters: params, encoding: JSONEncoding.default)
+        return Alamofire.request(baseUrl + "contacts", method: .post, parameters: params, encoding: JSONEncoding.default)
     }
     
     static func getContatos() -> DataRequest {

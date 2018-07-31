@@ -41,11 +41,36 @@
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="kGc-Ia-OTZ" id="4zb-hX-hyw"/>
+                        <segue destination="MVu-oX-wEQ" kind="show" identifier="segueDetalhe" id="Kbv-UI-gXB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nXl-UJ-pEw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="816.79999999999995" y="142.57871064467767"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Q44-Dj-7Bx">
+            <objects>
+                <viewController id="MVu-oX-wEQ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="M1w-Rz-pFh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Av8-eZ-wtr">
+                                <rect key="frame" x="166" y="323" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="Sa9-ym-CCo"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W43-Zd-cwn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="817" y="847"/>
         </scene>
         <!--Adicionar Contato View Controller-->
         <scene sceneID="Y9v-zd-5y1">

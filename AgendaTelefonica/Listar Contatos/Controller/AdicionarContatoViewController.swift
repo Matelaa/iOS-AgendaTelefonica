@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 class AdicionarContatoViewController: UIViewController {
 
@@ -15,6 +16,8 @@ class AdicionarContatoViewController: UIViewController {
     @IBOutlet weak var telefone: UITextField!
     @IBOutlet weak var urlImagem: UITextField!
     @IBOutlet weak var criar: UIButton!
+    var contatos: [ContatoView] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -31,6 +34,10 @@ class AdicionarContatoViewController: UIViewController {
         
     }
     @IBAction func criarContato(_ sender: Any) {
-    
+        
+        
+        let svNome = self.nome.text
+        
+        
     }
 }
