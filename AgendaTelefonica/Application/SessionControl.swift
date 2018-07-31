@@ -32,6 +32,8 @@ class SessionControl {
             // sem passar parametro
             if let user = uiRealm.objects(User.self).first {
                 
+                header["Content-Type"] = "application/json"
+                
                 if let accessToken = user.accessToken {
                     header["Access-Token"] = accessToken
                 }

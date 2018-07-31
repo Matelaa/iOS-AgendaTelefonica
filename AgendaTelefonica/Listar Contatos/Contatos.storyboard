@@ -48,10 +48,10 @@
             </objects>
             <point key="canvasLocation" x="816.79999999999995" y="142.57871064467767"/>
         </scene>
-        <!--View Controller-->
+        <!--Detalhe Contato View Controller-->
         <scene sceneID="Q44-Dj-7Bx">
             <objects>
-                <viewController id="MVu-oX-wEQ" sceneMemberID="viewController">
+                <viewController id="MVu-oX-wEQ" customClass="DetalheContatoViewController" customModule="AgendaTelefonica" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="M1w-Rz-pFh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -67,6 +67,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Sa9-ym-CCo"/>
                     </view>
+                    <connections>
+                        <outlet property="testeNome" destination="Av8-eZ-wtr" id="W1g-vw-RLH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W43-Zd-cwn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

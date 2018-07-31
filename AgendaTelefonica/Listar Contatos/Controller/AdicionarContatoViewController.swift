@@ -18,10 +18,15 @@ class AdicionarContatoViewController: UIViewController {
     @IBOutlet weak var criar: UIButton!
     var contatos: [ContatoView] = []
     
+    var service: ContatoService!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         self.title = L10n.Contatos.novocontato
+        
+        self.service = ContatoService(delegate: self)
+
         
         self.nome.placeholder = L10n.Contatos.nome
         self.email.placeholder = L10n.Contatos.email
@@ -35,8 +40,39 @@ class AdicionarContatoViewController: UIViewController {
     }
     @IBAction func criarContato(_ sender: Any) {
         
+        //if let nomeSalvar = self.nome.text, let emailSalvar = self.email.text, let telefoneSalvar = self.telefone.text, let urlSalvar = self.urlImagem.text {
         
-        let svNome = self.nome.text
+          //  self.service.postContatos(nomeContato: nomeSalvar, aniversarioContato: "111", emailContato: emailSalvar, telefoneContato: telefoneSalvar, urlImagemContato: urlSalvar)
+        
+        if((self.service) != nil){
+            print("here")
+            if let nomeSalvar = self.nome.text, let emailSalvar = self.email.text, let telefoneSalvar = self.telefone.text, let urlSalvar = self.urlImagem.text {
+            self.service.postContatos(nomeContato: nomeSalvar, aniversarioContato: "11/11/1989", emailContato: emailSalvar, telefoneContato: telefoneSalvar, urlImagemContato: urlSalvar)
+             }
+        }else{
+            print("no service")
+        }
+        
+    }
+}
+
+extension AdicionarContatoViewController: ContatoServiceDelegate {
+    func criarContatoSuccess() {
+        
+        self.contatos = ContatosViewModel.get()
+        
+    }
+    
+    func criarContatoFailure(error: String) {
+        
+    }
+    
+    func getContatosSuccess() {
+        
+        
+    }
+    
+    func getContatosFailure(error: String) {
         
         
     }

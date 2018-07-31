@@ -9,6 +9,8 @@
 import UIKit
 import Kingfisher
 
+var myIndex = 0
+
 class ContatosViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
@@ -33,6 +35,14 @@ class ContatosViewController: UIViewController {
 }
 
 extension ContatosViewController: ContatoServiceDelegate {
+    func criarContatoSuccess() {
+        
+    }
+    
+    func criarContatoFailure(error: String) {
+        
+    }
+    
     
     func getContatosSuccess() {
         
@@ -72,5 +82,12 @@ extension ContatosViewController: UITableViewDataSource, UITableViewDelegate {
         cell.bind(contato: self.contatos[indexPath.row])
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        myIndex = indexPath.row
+        
+        performSegue(withIdentifier: "segueDetalhe", sender: self)
     }
 }

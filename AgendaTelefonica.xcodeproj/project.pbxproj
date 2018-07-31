@@ -33,6 +33,7 @@
 		83F2918220FE3A7400ACCCF9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83F2918020FE3A7400ACCCF9 /* Main.storyboard */; };
 		83F2918420FE3A7B00ACCCF9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83F2918320FE3A7B00ACCCF9 /* Assets.xcassets */; };
 		83F2918720FE3A7B00ACCCF9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83F2918520FE3A7B00ACCCF9 /* LaunchScreen.storyboard */; };
+		B660B74421107DD600A9466C /* DetalheContatoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B660B74321107DD600A9466C /* DetalheContatoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +65,7 @@
 		83F2918620FE3A7B00ACCCF9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		83F2918820FE3A7B00ACCCF9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8471273067B67CBED1781775 /* Pods_AgendaTelefonica.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AgendaTelefonica.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B660B74321107DD600A9466C /* DetalheContatoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalheContatoViewController.swift; sourceTree = "<group>"; };
 		CC4B4AA3BA9991A2FA834039 /* Pods-AgendaTelefonica.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AgendaTelefonica.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AgendaTelefonica/Pods-AgendaTelefonica.debug.xcconfig"; sourceTree = "<group>"; };
 		F82119A18AEAE5246D6A77B0 /* Pods-AgendaTelefonica.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AgendaTelefonica.release.xcconfig"; path = "Pods/Target Support Files/Pods-AgendaTelefonica/Pods-AgendaTelefonica.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -219,6 +221,7 @@
 				834A357B210212F400F83CDE /* Cells */,
 				83277AAE2100C4EF0025F79F /* ContatosViewController.swift */,
 				834A35802102352500F83CDE /* AdicionarContatoViewController.swift */,
+				B660B74321107DD600A9466C /* DetalheContatoViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -415,6 +418,7 @@
 				83277AB32100CA6C0025F79F /* ContatoRequestFactory.swift in Sources */,
 				83F2917F20FE3A7400ACCCF9 /* ViewController.swift in Sources */,
 				83034B5320FF742F004D305F /* LoginRequestFactory.swift in Sources */,
+				B660B74421107DD600A9466C /* DetalheContatoViewController.swift in Sources */,
 				83277AA42100BBB40025F79F /* UserViewModel.swift in Sources */,
 				83034B4E20FF6BAC004D305F /* Colors.swift in Sources */,
 				834A35812102352500F83CDE /* AdicionarContatoViewController.swift in Sources */,
