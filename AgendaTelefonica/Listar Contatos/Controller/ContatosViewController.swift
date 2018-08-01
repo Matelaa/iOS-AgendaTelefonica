@@ -28,7 +28,6 @@ class ContatosViewController: UIViewController {
         self.tableView.dataSource = self
         self.tableView.delegate = self
         
-        
     }
 }
 
@@ -84,6 +83,7 @@ extension ContatosViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 
+        
         performSegue(withIdentifier: "segueDetalhe", sender: self)
 
     }

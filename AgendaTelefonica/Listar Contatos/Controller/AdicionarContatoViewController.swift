@@ -43,13 +43,17 @@ class AdicionarContatoViewController: UIViewController {
         if let nomeSalvar = self.nome.text, let emailSalvar = self.email.text, let telefoneSalvar = self.telefone.text, let urlSalvar = self.urlImagem.text {
         
             self.service.postContatos(nomeContato: nomeSalvar, aniversarioContato: 0, emailContato: emailSalvar, telefoneContato: telefoneSalvar, urlImagemContato: urlSalvar)
+            
+            self.navigationController
         }
-        
-        
     }
 }
 
 extension AdicionarContatoViewController: ContatoServiceDelegate {
+    func getContatosFailure(error: String) {
+        
+    }
+    
     func criarContatoSuccess() {
         
     }
@@ -60,11 +64,10 @@ extension AdicionarContatoViewController: ContatoServiceDelegate {
     
     func getContatosSuccess() {
         
-        
-    }
-    
-    func getContatosFailure(error: String) {
-        
-        
     }
 }
+    
+    func getContatosFailure(error: String) {
+
+}
+
