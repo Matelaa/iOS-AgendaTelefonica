@@ -9,8 +9,6 @@
 import UIKit
 import Kingfisher
 
-var myIndex = 0
-
 class ContatosViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
@@ -85,9 +83,8 @@ extension ContatosViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        myIndex = indexPath.row
-        
+
         performSegue(withIdentifier: "segueDetalhe", sender: self)
+
     }
 }

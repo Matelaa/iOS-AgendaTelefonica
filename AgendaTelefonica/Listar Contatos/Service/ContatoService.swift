@@ -52,9 +52,33 @@ class ContatoService {
         }
     }
     
-    func postContatos(nomeContato: String, aniversarioContato: String, emailContato: String, telefoneContato: String, urlImagemContato: String) {
+//    func postContatos(nomeContato: String, aniversarioContato: String, emailContato: String, telefoneContato: String, urlImagemContato: String) {
+//
+//        ContatoRequestFactory.postCriar(nome: nomeContato, aniversario: aniversarioContato, email: emailContato, telefone: telefoneContato, avatar: urlImagemContato).validate().responseObject { (response: DataResponse<Contato>) in
+//
+//            switch response.result {
+//
+//            case .success:
+//
+//                if let contatos = response.result.value {
+//
+//                    ContatosViewModel.clear()
+//
+//                    ContatosViewModel.save(contatos: [contatos])
+//                }
+//
+//                self.delegate.getContatosSuccess()
+//
+//            case .failure(let error):
+//
+//                self.delegate.getContatosFailure(error: error.localizedDescription)
+//            }
+//        }
+//    }
+    
+    func postContatos(nomeContato: String, aniversarioContato: Int, emailContato: String, telefoneContato: String, urlImagemContato: String) {
         
-        ContatoRequestFactory.postCriar(nome: nomeContato, aniversario: aniversarioContato, email: emailContato, telefone: telefoneContato, avatar: urlImagemContato).validate().responseArray { (response: DataResponse<[Contato]>) in
+        ContatoRequestFactory.postCriar(nome: nomeContato, aniversario: aniversarioContato, email: emailContato, telefone: telefoneContato, avatar: urlImagemContato).validate().responseObject { (response: DataResponse<Contato>) in
             
             switch response.result {
                 
@@ -64,7 +88,7 @@ class ContatoService {
                     
                     ContatosViewModel.clear()
                     
-                    ContatosViewModel.save(contatos: contatos)
+                    ContatosViewModel.save(contatos: [contatos])
                 }
                 
                 self.delegate.getContatosSuccess()
@@ -74,6 +98,11 @@ class ContatoService {
                 self.delegate.getContatosFailure(error: error.localizedDescription)
             }
         }
+        
+//        ContatoRequestFactory.postCriar(nome: nomeContato, aniversario: aniversarioContato, email: emailContato, telefone: telefoneContato, avatar: urlImagemContato).validate().responseObject() { (response: DataResponse<Contato>) in
+//            
+//            
+//        }
     }
 }
 

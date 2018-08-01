@@ -40,26 +40,17 @@ class AdicionarContatoViewController: UIViewController {
     }
     @IBAction func criarContato(_ sender: Any) {
         
-        //if let nomeSalvar = self.nome.text, let emailSalvar = self.email.text, let telefoneSalvar = self.telefone.text, let urlSalvar = self.urlImagem.text {
+        if let nomeSalvar = self.nome.text, let emailSalvar = self.email.text, let telefoneSalvar = self.telefone.text, let urlSalvar = self.urlImagem.text {
         
-          //  self.service.postContatos(nomeContato: nomeSalvar, aniversarioContato: "111", emailContato: emailSalvar, telefoneContato: telefoneSalvar, urlImagemContato: urlSalvar)
-        
-        if((self.service) != nil){
-            print("here")
-            if let nomeSalvar = self.nome.text, let emailSalvar = self.email.text, let telefoneSalvar = self.telefone.text, let urlSalvar = self.urlImagem.text {
-            self.service.postContatos(nomeContato: nomeSalvar, aniversarioContato: "11/11/1989", emailContato: emailSalvar, telefoneContato: telefoneSalvar, urlImagemContato: urlSalvar)
-             }
-        }else{
-            print("no service")
+            self.service.postContatos(nomeContato: nomeSalvar, aniversarioContato: 0, emailContato: emailSalvar, telefoneContato: telefoneSalvar, urlImagemContato: urlSalvar)
         }
+        
         
     }
 }
 
 extension AdicionarContatoViewController: ContatoServiceDelegate {
     func criarContatoSuccess() {
-        
-        self.contatos = ContatosViewModel.get()
         
     }
     

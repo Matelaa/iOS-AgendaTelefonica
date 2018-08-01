@@ -11,7 +11,7 @@ import Alamofire
 
 class ContatoRequestFactory {
     
-    static func postCriar(nome: String, aniversario: String, email: String, telefone: String, avatar: String) -> DataRequest {
+    static func postCriar(nome: String, aniversario: Int, email: String, telefone: String, avatar: String) -> DataRequest {
         
         let params: Parameters = ["name" : nome, "birth" : aniversario, "email" : email, "phone" : telefone, "picture" : avatar]
         
