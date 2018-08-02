@@ -17,6 +17,7 @@ class ContatosViewController: UIViewController {
     
     var contatos: [ContatoView] = []
     
+    // Roda a tela
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -28,6 +29,29 @@ class ContatosViewController: UIViewController {
         self.tableView.dataSource = self
         self.tableView.delegate = self
         
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        
+        self.service.getContatos()
+    }
+    
+    // funcao criada para passar para a outra tela o id daquele certo contato
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+
+        switch StoryboardSegue.Contatos(rawValue: segue.identifier!)! {
+
+        case .segueDetalhe:
+
+            if let controller = segue.destination as? DetalheContatoViewController {
+
+                if let id = sender as? Int {
+
+                    controller.id = id
+                }
+            }
+        }
     }
 }
 
@@ -46,9 +70,9 @@ extension ContatosViewController: ContatoServiceDelegate {
         self.contatos = ContatosViewModel.get()
         self.tableView.reloadData()
         
-        for contato in ContatosViewModel.get() {
-            print(contato.nome)
-        }
+//        for contato in ContatosViewModel.get() {
+//            print(contato.nome)
+//        }
     }
     
     func getContatosFailure(error: String) {
@@ -81,10 +105,10 @@ extension ContatosViewController: UITableViewDataSource, UITableViewDelegate {
         return cell
     }
     
+    // funcao para eu pegar aquele determinado contato que esta localizada em um determinado index do array de celulas
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 
+        self.perform(segue: StoryboardSegue.Contatos.segueDetalhe, sender: self.contatos[indexPath.row].id)
         
-        performSegue(withIdentifier: "segueDetalhe", sender: self)
-
     }
 }

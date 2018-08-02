@@ -52,30 +52,6 @@ class ContatoService {
         }
     }
     
-//    func postContatos(nomeContato: String, aniversarioContato: String, emailContato: String, telefoneContato: String, urlImagemContato: String) {
-//
-//        ContatoRequestFactory.postCriar(nome: nomeContato, aniversario: aniversarioContato, email: emailContato, telefone: telefoneContato, avatar: urlImagemContato).validate().responseObject { (response: DataResponse<Contato>) in
-//
-//            switch response.result {
-//
-//            case .success:
-//
-//                if let contatos = response.result.value {
-//
-//                    ContatosViewModel.clear()
-//
-//                    ContatosViewModel.save(contatos: [contatos])
-//                }
-//
-//                self.delegate.getContatosSuccess()
-//
-//            case .failure(let error):
-//
-//                self.delegate.getContatosFailure(error: error.localizedDescription)
-//            }
-//        }
-//    }
-    
     func postContatos(nomeContato: String, aniversarioContato: Int, emailContato: String, telefoneContato: String, urlImagemContato: String) {
         
         ContatoRequestFactory.postCriar(nome: nomeContato, aniversario: aniversarioContato, email: emailContato, telefone: telefoneContato, avatar: urlImagemContato).validate().responseObject { (response: DataResponse<Contato>) in
@@ -98,11 +74,6 @@ class ContatoService {
                 self.delegate.getContatosFailure(error: error.localizedDescription)
             }
         }
-        
-//        ContatoRequestFactory.postCriar(nome: nomeContato, aniversario: aniversarioContato, email: emailContato, telefone: telefoneContato, avatar: urlImagemContato).validate().responseObject() { (response: DataResponse<Contato>) in
-//            
-//            
-//        }
     }
 }
 

@@ -10,9 +10,11 @@ import Foundation
 import RealmSwift
 
 struct ContatoView {
-    
+
+    var id: Int = 0
     var nome: String = ""
     var email: String = ""
+    var telefone: String = ""
     var avatar: String = ""
     
     var avatarUrl: URL? {
@@ -33,6 +35,8 @@ class ContatosViewModel {
         
         var contatoView = ContatoView()
         
+        contatoView.telefone = contato.telefone ?? ""
+        contatoView.id = contato.id.value ?? 0
         contatoView.nome = contato.nome ?? ""
         contatoView.email = contato.email ?? ""
         contatoView.avatar = contato.avatar ?? ""
@@ -77,5 +81,12 @@ class ContatosViewModel {
         contatos.append(contentsOf: contatosModel)
 
         return self.getAsView(sequence: contatos)
+    }
+    
+    static func get(id: Int) -> ContatoView {
+        
+        let contatosModel = uiRealm.object(ofType: Contato.self, forPrimaryKey: id)
+        
+        return getAsView(contatosModel)
     }
 }

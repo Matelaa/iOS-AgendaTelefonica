@@ -44,7 +44,9 @@ class AdicionarContatoViewController: UIViewController {
         
             self.service.postContatos(nomeContato: nomeSalvar, aniversarioContato: 0, emailContato: emailSalvar, telefoneContato: telefoneSalvar, urlImagemContato: urlSalvar)
             
-            self.navigationController
+            let alert = UIAlertController(title: "Contato Criado", message: "O contato \(nomeSalvar) foi criado com sucesso", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
         }
     }
 }
