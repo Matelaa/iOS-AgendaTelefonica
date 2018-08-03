@@ -11,15 +11,18 @@ import RealmSwift
 
 class AdicionarContatoViewController: UIViewController {
 
+    // MARK: - UI Elements
     @IBOutlet weak var nome: UITextField!
     @IBOutlet weak var email: UITextField!
     @IBOutlet weak var telefone: UITextField!
     @IBOutlet weak var urlImagem: UITextField!
     @IBOutlet weak var criar: UIButton!
-    var contatos: [ContatoView] = []
     
+    // MARK: - Vars
+    var contatos: [ContatoView] = []
     var service: ContatoService!
     
+    // MARK: - Life
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -38,6 +41,9 @@ class AdicionarContatoViewController: UIViewController {
         self.criar.backgroundColor = UIColor(red: 173/255, green: 216/255, blue: 230/255, alpha: 1)
         
     }
+    
+    // MARK: - Actions
+    // Funcao para adicionar um contato no banco de dados do sistema, passando como parametro todos os seus dados
     @IBAction func criarContato(_ sender: Any) {
         
         if let nomeSalvar = self.nome.text, let emailSalvar = self.email.text, let telefoneSalvar = self.telefone.text, let urlSalvar = self.urlImagem.text {
@@ -47,6 +53,7 @@ class AdicionarContatoViewController: UIViewController {
             let alert = UIAlertController(title: "Contato Criado", message: "O contato \(nomeSalvar) foi criado com sucesso", preferredStyle: UIAlertControllerStyle.alert)
             alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
             self.present(alert, animated: true, completion: nil)
+            
         }
     }
 }

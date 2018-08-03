@@ -11,16 +11,18 @@ import Reusable
 
 class ContatoTableViewCell: UITableViewCell, NibReusable {
 
+    // MARK: - UI Elements
     @IBOutlet weak var avatar: UIImageView!
     @IBOutlet weak var nome: UILabel!
     
+    // MARK: - Life
     override func awakeFromNib() {
         super.awakeFromNib()
         
     }
     
-    // funcao para setar o nome de um contato na celular e sua foto
-    
+    // MARK: - Actions
+    // Funcao para setar o nome de um contato na celula e sua foto
     func bind(contato: ContatoView) {
         
         self.nome.text = contato.nome

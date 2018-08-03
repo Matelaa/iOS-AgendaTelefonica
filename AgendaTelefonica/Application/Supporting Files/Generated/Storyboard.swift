@@ -69,6 +69,7 @@ internal enum StoryboardScene {
 
 internal enum StoryboardSegue {
   internal enum Contatos: String, SegueType {
+    case segueAdicionar
     case segueDetalhe
   }
   internal enum Main: String, SegueType {

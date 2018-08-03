@@ -11,13 +11,15 @@ import Kingfisher
 
 class ContatosViewController: UIViewController {
 
+    // MARK: - UI Elements
     @IBOutlet weak var tableView: UITableView!
     
+    // MARK: - Vars
     var service: ContatoService!
-    
     var contatos: [ContatoView] = []
     
-    // Roda a tela
+    // MARK: - Life
+    // Quando essa tela é aberta uma vez, ela executa esses comandos, e quando volta para ela, não executa mais
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -31,13 +33,14 @@ class ContatosViewController: UIViewController {
         
     }
     
+    // Funcao criada para atualizar a tela toda vida que ela for aberta
     override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(true)
+        super.viewWillAppear(animated)
         
         self.service.getContatos()
     }
     
-    // funcao criada para passar para a outra tela o id daquele certo contato
+    // funcao criada para passar para a tela de detalhe o id daquele certo contato
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 
         switch StoryboardSegue.Contatos(rawValue: segue.identifier!)! {
@@ -51,6 +54,8 @@ class ContatosViewController: UIViewController {
                     controller.id = id
                 }
             }
+        case .segueAdicionar: break
+            
         }
     }
 }
@@ -64,15 +69,10 @@ extension ContatosViewController: ContatoServiceDelegate {
         
     }
     
-    
     func getContatosSuccess() {
         
         self.contatos = ContatosViewModel.get()
         self.tableView.reloadData()
-        
-//        for contato in ContatosViewModel.get() {
-//            print(contato.nome)
-//        }
     }
     
     func getContatosFailure(error: String) {

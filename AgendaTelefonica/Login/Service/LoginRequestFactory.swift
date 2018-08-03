@@ -11,6 +11,7 @@ import Alamofire
 
 class LoginRequestFactory {
     
+    // Funcao criada para fazer a requisicao ao postman
     static func postLogin(email: String, senha: String) -> DataRequest {
         
         let params: Parameters = ["email" : email, "password" : senha]

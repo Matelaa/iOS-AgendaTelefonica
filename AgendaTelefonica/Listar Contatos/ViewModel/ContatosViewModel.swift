@@ -9,6 +9,7 @@
 import Foundation
 import RealmSwift
 
+// Struct que contem todas as informacoes do usuario
 struct ContatoView {
 
     var id: Int = 0
@@ -25,7 +26,7 @@ struct ContatoView {
 
 class ContatosViewModel {
     
-    // para apenas uma pessoa
+    // Funcao criada para retornar apenas uma pessoa
     static func getAsView(_ contato: Contato?) -> ContatoView {
         
         guard let contato = contato else {
@@ -44,7 +45,7 @@ class ContatosViewModel {
         return contatoView
     }
     
-    // para um vetor de pessoas
+    // Funcao criada para retornar um vetor de pessoas
     static func getAsView(sequence contatos: [Contato]) -> [ContatoView] {
         
         var contatosView = [ContatoView]()
@@ -73,6 +74,7 @@ class ContatosViewModel {
         }
     }
     
+    // Funcao criada para pegar todos os contatos do banco com as informacoes de cada um
     static func get() -> [ContatoView] {
         
         let contatosModel = uiRealm.objects(Contato.self)
@@ -83,6 +85,7 @@ class ContatosViewModel {
         return self.getAsView(sequence: contatos)
     }
     
+    // Funcao criada para pegar o ID de um certo contato no banco e retornar suas informacoes
     static func get(id: Int) -> ContatoView {
         
         let contatosModel = uiRealm.object(ofType: Contato.self, forPrimaryKey: id)

@@ -30,6 +30,7 @@ class UserViewModel {
         }
     }
     
+    // Funcao criada para setar os headers de todas as requisicoes ao postman
     static func setHeadersParams(headers: [AnyHashable : Any]?) {
         
         guard let headers = headers, let user = uiRealm.objects(User.self).first else {
