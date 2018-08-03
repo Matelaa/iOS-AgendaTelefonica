@@ -22,6 +22,8 @@ internal enum L10n {
     internal static let editar = L10n.tr("Localizable", "contatos.editar")
     /// Email
     internal static let email = L10n.tr("Localizable", "contatos.email")
+    /// Excluir
+    internal static let excluir = L10n.tr("Localizable", "contatos.excluir")
     /// Nome
     internal static let nome = L10n.tr("Localizable", "contatos.nome")
     /// Novo Contato

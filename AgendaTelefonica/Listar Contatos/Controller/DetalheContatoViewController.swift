@@ -17,7 +17,6 @@ class DetalheContatoViewController: UIViewController {
     @IBOutlet weak var txtEmail: UITextField!
     @IBOutlet weak var txtTelefone: UITextField!
     @IBOutlet weak var txtUrl: UITextField!
-    @IBOutlet weak var btnEditar: UIButton!
     @IBOutlet weak var btnConfirmar: UIButton!
     @IBOutlet weak var btnExcluir: UIButton!
     
@@ -53,14 +52,17 @@ class DetalheContatoViewController: UIViewController {
         self.btnConfirmar.layer.cornerRadius = self.btnConfirmar.bounds.height / 2
         self.btnConfirmar.backgroundColor = UIColor(red: 173/255, green: 216/255, blue: 230/255, alpha: 1)
         
-        self.btnEditar.setTitle(L10n.Contatos.editar, for: .normal)
-        self.btnEditar.layer.cornerRadius = self.btnEditar.bounds.height / 2
-        self.btnEditar.backgroundColor = UIColor(red: 173/255, green: 216/255, blue: 230/255, alpha: 1)
+        let btnEditar = UIBarButtonItem(title: L10n.Contatos.editar, style: .plain, target: self, action: #selector(DetalheContatoViewController.editar))
+        self.navigationItem.rightBarButtonItem = btnEditar
+        
+        self.btnExcluir.setTitle(L10n.Contatos.excluir, for: .normal)
+        self.btnExcluir.layer.cornerRadius = self.btnExcluir.bounds.height / 2
+        self.btnExcluir.backgroundColor = UIColor(red: 173/255, green: 216/255, blue: 230/255, alpha: 1)
     }
     
     // MARK: - Actions
     // Funcao para poder habilitar a edicao dos textfield's da tela
-    @IBAction func editarContato(_ sender: Any) {
+    @objc func editar() {
         
         txtNome.isEnabled = true
         txtEmail.isEnabled = true
@@ -79,7 +81,7 @@ class DetalheContatoViewController: UIViewController {
         
     }
     
-    
+    // Funcao criada para excluir um determinado contato
     @IBAction func excluir(_ sender: Any) {
         
         self.service.delContato(id: id)

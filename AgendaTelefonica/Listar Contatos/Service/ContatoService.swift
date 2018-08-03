@@ -64,8 +64,6 @@ class ContatoService {
                 
                 if let contatos = response.result.value {
                     
-                    ContatosViewModel.clear()
-                    
                     ContatosViewModel.save(contatos: [contatos])
                 }
                 
@@ -108,11 +106,6 @@ class ContatoService {
             switch response.result {
                 
             case .success:
-                
-                if let contatos = response.result.value {
-                    
-                    ContatosViewModel.clear()
-                }
                 
                 self.delegate.getContatosSuccess()
                 
