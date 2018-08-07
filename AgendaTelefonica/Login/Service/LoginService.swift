@@ -50,4 +50,9 @@ class LoginService {
             }
         }
     }
+    
+//    func deslogar() {
+//        
+//        LoginRequestFactory.delLogout().validate().responseObject
+//    }
 }

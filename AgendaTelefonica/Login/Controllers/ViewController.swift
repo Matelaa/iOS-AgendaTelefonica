@@ -42,6 +42,8 @@ class ViewController: UIViewController {
         self.btnCadastrar.layer.cornerRadius = self.btnCadastrar.bounds.height / 2
         self.btnCadastrar.backgroundColor = UIColor(red: 173/255, green: 216/255, blue: 230/255, alpha: 1)
         
+        
+        
     }
     
     //

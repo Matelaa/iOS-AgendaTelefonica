@@ -11,5 +11,6 @@ pod 'AlamofireObjectMapper'
 pod 'RealmSwift'
 pod 'Reusable'
 pod 'Kingfisher'
+pod 'MGSwipeTableCell'
 
 end

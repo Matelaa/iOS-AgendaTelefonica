@@ -18,4 +18,9 @@ class LoginRequestFactory {
         
         return Alamofire.request(baseUrl + "auth/sign_in", method: .post, parameters: params, encoding: JSONEncoding.default)
     }
+    
+    static func delLogout() -> DataRequest {
+        
+        return Alamofire.request(baseUrl + "auth/sign_out", method: .delete, encoding: JSONEncoding.default, headers: header)
+    }
 }

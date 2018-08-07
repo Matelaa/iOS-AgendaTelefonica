@@ -8,8 +8,9 @@
 
 import UIKit
 import Reusable
+import MGSwipeTableCell
 
-class ContatoTableViewCell: UITableViewCell, NibReusable {
+class ContatoTableViewCell: MGSwipeTableCell ,NibReusable {
 
     // MARK: - UI Elements
     @IBOutlet weak var avatar: UIImageView!

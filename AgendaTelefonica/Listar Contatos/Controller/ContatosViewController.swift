@@ -8,7 +8,7 @@
 
 import UIKit
 import Kingfisher
-
+import MGSwipeTableCell
 class ContatosViewController: UIViewController {
     
     // MARK: - UI Elements
@@ -95,13 +95,24 @@ extension ContatosViewController: UITableViewDataSource, UITableViewDelegate {
         return 91
     }
     
-    // funcao para setar cada celula de uma tableview
+    //funcao para setar cada celula de uma tableview, juntamente com a funcao de Swipe to Delete, da bilioteca (MGSwipeTableCell)
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
+
         let cell = tableView.dequeueReusableCell(for: indexPath) as ContatoTableViewCell
+
+        cell.rightButtons = [MGSwipeButton(title: "", icon: Asset.trash.image, backgroundColor: .red, padding: 25){
+            (sender: MGSwipeTableCell!) -> Bool in
+            let deletado = self.contatos.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+            tableView.reloadData()
+            self.service.delContato(id: deletado.id)
+            return true
+        }]
         
+        cell.rightSwipeSettings.transition = .static
+
         cell.bind(contato: self.contatos[indexPath.row])
-        
+
         return cell
     }
     
@@ -111,16 +122,4 @@ extension ContatosViewController: UITableViewDataSource, UITableViewDelegate {
         self.perform(segue: StoryboardSegue.Contatos.segueDetalhe, sender: self.contatos[indexPath.row].id)
         
     }
-    
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        
-        if editingStyle == .delete {
-            
-            let teste = self.contatos.remove(at: indexPath.row)
-            tableView.deleteRows(at: [indexPath], with: .fade)
-            tableView.reloadData()
-            self.service.delContato(id: teste.id)
-        }
-    }
-    
 }
