@@ -10,7 +10,7 @@ import UIKit
 import Kingfisher
 
 class ContatosViewController: UIViewController {
-
+    
     // MARK: - UI Elements
     @IBOutlet weak var tableView: UITableView!
     
@@ -22,7 +22,7 @@ class ContatosViewController: UIViewController {
     // Quando essa tela é aberta uma vez, ela executa esses comandos, e quando volta para ela, não executa mais
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         
         self.title = L10n.Contatos.title
         self.service = ContatoService(delegate: self)
@@ -42,15 +42,15 @@ class ContatosViewController: UIViewController {
     
     // funcao criada para passar para a tela de detalhe o id daquele certo contato
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-
+        
         switch StoryboardSegue.Contatos(rawValue: segue.identifier!)! {
-
+            
         case .segueDetalhe:
-
+            
             if let controller = segue.destination as? DetalheContatoViewController {
-
+                
                 if let id = sender as? Int {
-
+                    
                     controller.id = id
                 }
             }
@@ -107,8 +107,20 @@ extension ContatosViewController: UITableViewDataSource, UITableViewDelegate {
     
     // funcao para eu pegar aquele determinado contato que esta localizada em um determinado index do array de celulas
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-
+        
         self.perform(segue: StoryboardSegue.Contatos.segueDetalhe, sender: self.contatos[indexPath.row].id)
         
     }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        
+        if editingStyle == .delete {
+            
+            let teste = self.contatos.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+            tableView.reloadData()
+            self.service.delContato(id: teste.id)
+        }
+    }
+    
 }

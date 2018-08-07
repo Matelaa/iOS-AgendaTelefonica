@@ -44,11 +44,11 @@ class ViewController: UIViewController {
         
     }
     
-    // 
+    //
     // MARK: - Actions
     // Funcao criada para entrar no aplicativo com o usuario criado no Postman
     @IBAction func entrar(_ sender: Any) {
-    
+        
         if let email = self.txtEmail.text, let senha = self.txtSenha.text {
             
             self.service.postLogin(email: email, senha: senha)
@@ -56,7 +56,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func cadastrar(_ sender: Any) {
-    
+        
     }
     
 }
