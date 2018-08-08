@@ -10,24 +10,26 @@ import Foundation
 import AlamofireObjectMapper
 import Alamofire
 
-protocol LoginServiceDelegate {
+protocol AutenticacaoServiceDelegate {
     
     func postLoginSuccess()
     func postLoginFailure(error: String)
+    func delLogoutSuccess()
+    func delLogoutFailure(error: String)
 }
 
-class LoginService {
+class AutenticacaoService {
     
-    var delegate: LoginServiceDelegate
+    var delegate: AutenticacaoServiceDelegate
     
-    required init(delegate: LoginServiceDelegate) {
+    required init(delegate: AutenticacaoServiceDelegate) {
         self.delegate = delegate
     }
     
     // Funcao criada para fazer a requisicao de entrar no aplicativo caso esteja igual ao postman, passando como parametro seu email e senha
     func postLogin(email: String, senha: String) {
         
-        LoginRequestFactory.postLogin(email: email, senha: senha).validate().responseObject(keyPath: "data") { (response: DataResponse<User>) in
+        AutenticacaoRequestFactory.postLogin(email: email, senha: senha).validate().responseObject(keyPath: "data") { (response: DataResponse<User>) in
             
             switch response.result {
                 
@@ -51,8 +53,23 @@ class LoginService {
         }
     }
     
-//    func deslogar() {
-//        
-//        LoginRequestFactory.delLogout().validate().responseObject
-//    }
+    func Logout() {
+        
+        AutenticacaoRequestFactory.delLogout().validate().responseObject { (response: DataResponse<User>) in
+            
+            switch response.result {
+                
+            case .success:
+                
+                ContatosViewModel.clear()
+                UserViewModel.clear()
+                
+                self.delegate.delLogoutSuccess()
+                
+            case .failure(let error):
+                
+                self.delegate.delLogoutFailure(error: error.localizedDescription)
+            }
+        }
+    }
 }

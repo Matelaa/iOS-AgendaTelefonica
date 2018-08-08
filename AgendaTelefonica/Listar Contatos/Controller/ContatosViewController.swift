@@ -16,6 +16,7 @@ class ContatosViewController: UIViewController {
     
     // MARK: - Vars
     var service: ContatoService!
+    var serviceAutent: AutenticacaoService!
     var contatos: [ContatoView] = []
     
     // MARK: - Life
@@ -23,13 +24,36 @@ class ContatosViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
         self.title = L10n.Contatos.title
-        self.service = ContatoService(delegate: self)
-        self.service.getContatos()
-        self.tableView.register(cellType: ContatoTableViewCell.self)
+        
         self.tableView.dataSource = self
         self.tableView.delegate = self
+        self.tableView.register(cellType: ContatoTableViewCell.self)
+        
+        self.service = ContatoService(delegate: self)
+        self.serviceAutent = AutenticacaoService(delegate: self)
+        self.contatos = ContatosViewModel.get()
+        self.service.getContatos()
+        
+        let btnDeslogar = UIBarButtonItem(title: L10n.Contatos.deslogar, style: .plain, target: self, action: #selector(ContatosViewController.deslogar))
+        self.navigationItem.leftBarButtonItem = btnDeslogar
+        
+    }
+    
+    
+    @objc func deslogar() {
+        
+        let logoutAlert = UIAlertController(title: "Logout", message: "Tem certeza que deseja sair?", preferredStyle: UIAlertControllerStyle.alert)
+        
+        logoutAlert.addAction(UIAlertAction(title: "Cancel", style: .destructive, handler: { (action: UIAlertAction!) in
+        }))
+        
+        logoutAlert.addAction(UIAlertAction(title: "Confirm", style: .default, handler: { (action: UIAlertAction!) in
+            
+            self.serviceAutent.Logout()
+        }))
+        
+        present(logoutAlert, animated: true, completion: nil)
         
     }
     
@@ -81,6 +105,40 @@ extension ContatosViewController: ContatoServiceDelegate {
     
 }
 
+extension ContatosViewController: AutenticacaoServiceDelegate {
+    func postLoginSuccess() {
+        
+    }
+    
+    func postLoginFailure(error: String) {
+        
+    }
+    
+    func delLogoutSuccess() {
+        
+        if SessionControl.isSessionActive {
+
+            // Variavel criada para quando for para a tela de contatos a navigation bar poder aparacer, pois esta dizendo que a navigation controller sera a tela da tableview
+            // Vai para a tela de Contatos
+            // 
+            let contatosController = UINavigationController(rootViewController: StoryboardScene.Contatos.contatosViewController.instantiate())
+
+            UIApplication.shared.keyWindow?.rootViewController = contatosController
+
+
+        } else {
+
+            // Vai para a tela de Login
+            UIApplication.shared.keyWindow?.rootViewController = StoryboardScene.Main.viewController.instantiate()
+        }
+    }
+    
+    func delLogoutFailure(error: String) {
+        
+        print(error)
+    }
+}
+
 extension ContatosViewController: UITableViewDataSource, UITableViewDelegate {
     
     // funcao para setar o numero de celular de acordo com o numero de contatos cadastrados
@@ -108,7 +166,8 @@ extension ContatosViewController: UITableViewDataSource, UITableViewDelegate {
             self.service.delContato(id: deletado.id)
             return true
         }]
-        cell.rightSwipeSettings.transition = .rotate3D
+        
+        cell.rightSwipeSettings.transition = .static
         cell.bind(contato: self.contatos[indexPath.row])
 
         return cell
@@ -118,6 +177,5 @@ extension ContatosViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         self.perform(segue: StoryboardSegue.Contatos.segueDetalhe, sender: self.contatos[indexPath.row].id)
-        
     }
 }

@@ -18,7 +18,6 @@ class DetalheContatoViewController: UIViewController {
     @IBOutlet weak var txtTelefone: UITextField!
     @IBOutlet weak var txtUrl: UITextField!
     @IBOutlet weak var btnConfirmar: UIButton!
-    @IBOutlet weak var btnExcluir: UIButton!
     
     // MARK: - Vars
     var id: Int = 0
@@ -54,10 +53,6 @@ class DetalheContatoViewController: UIViewController {
         
         let btnEditar = UIBarButtonItem(title: L10n.Contatos.editar, style: .plain, target: self, action: #selector(DetalheContatoViewController.editar))
         self.navigationItem.rightBarButtonItem = btnEditar
-        
-        self.btnExcluir.setTitle(L10n.Contatos.excluir, for: .normal)
-        self.btnExcluir.layer.cornerRadius = self.btnExcluir.bounds.height / 2
-        self.btnExcluir.backgroundColor = UIColor(red: 173/255, green: 216/255, blue: 230/255, alpha: 1)
     }
     
     // MARK: - Actions
@@ -80,18 +75,8 @@ class DetalheContatoViewController: UIViewController {
         self.present(alert, animated: true, completion: nil)
         
     }
-    
-    // Funcao criada para excluir um determinado contato
-    @IBAction func excluir(_ sender: Any) {
-        
-        self.service.delContato(id: id)
-        
-        let alert = UIAlertController(title: "Contato Excluido", message: "O contato \(self.txtNome.text!) foi excluido com sucesso", preferredStyle: UIAlertControllerStyle.alert)
-        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
-        self.present(alert, animated: true, completion: nil)
-    }
-    
 }
+
 extension DetalheContatoViewController: ContatoServiceDelegate {
     func criarContatoSuccess() {
         

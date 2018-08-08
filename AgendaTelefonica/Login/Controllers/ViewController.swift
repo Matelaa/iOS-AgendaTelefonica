@@ -11,7 +11,7 @@ import UIKit
 class ViewController: UIViewController {
     
     // MARK: - Vars
-    var service: LoginService!
+    var service: AutenticacaoService!
     
     // MARK: - UI Elements
     @IBOutlet weak var imagemIcone: UIImageView!
@@ -24,7 +24,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.service = LoginService(delegate: self)
+        self.service = AutenticacaoService(delegate: self)
         
         self.imagemIcone.image = Asset.iconeTelefone.image
         
@@ -64,7 +64,16 @@ class ViewController: UIViewController {
 }
 
 // Caso o Login seja igual ao do Postman, ele ira continuar a aplicacao
-extension ViewController: LoginServiceDelegate {
+extension ViewController: AutenticacaoServiceDelegate {
+    func delLogoutSuccess() {
+        
+        print("veio aqui")
+    }
+    
+    func delLogoutFailure(error: String) {
+
+    }
+    
     func postLoginSuccess() {
         
         self.perform(segue: StoryboardSegue.Main.segueEntrar)

@@ -18,6 +18,8 @@ internal enum L10n {
     internal static let confirmar = L10n.tr("Localizable", "contatos.confirmar")
     /// Criar
     internal static let criar = L10n.tr("Localizable", "contatos.criar")
+    /// Deslogar
+    internal static let deslogar = L10n.tr("Localizable", "contatos.deslogar")
     /// Editar
     internal static let editar = L10n.tr("Localizable", "contatos.editar")
     /// Email

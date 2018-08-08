@@ -14,8 +14,8 @@
 		83034B4F20FF6BAC004D305F /* Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83034B4B20FF6BAC004D305F /* Storyboard.swift */; };
 		83034B5020FF6BAC004D305F /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83034B4C20FF6BAC004D305F /* Assets.swift */; };
 		83034B5120FF6BAC004D305F /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83034B4D20FF6BAC004D305F /* Localizable.swift */; };
-		83034B5320FF742F004D305F /* LoginRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83034B5220FF742F004D305F /* LoginRequestFactory.swift */; };
-		83034B5520FF7457004D305F /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83034B5420FF7457004D305F /* LoginService.swift */; };
+		83034B5320FF742F004D305F /* AutenticacaoRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83034B5220FF742F004D305F /* AutenticacaoRequestFactory.swift */; };
+		83034B5520FF7457004D305F /* AutenticacaoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83034B5420FF7457004D305F /* AutenticacaoService.swift */; };
 		83277AA62100C2E50025F79F /* SessionControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83277AA52100C2E50025F79F /* SessionControl.swift */; };
 		83277AA92100C48E0025F79F /* Contatos.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83277AA82100C48E0025F79F /* Contatos.storyboard */; };
 		83277AAF2100C4EF0025F79F /* ContatosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83277AAE2100C4EF0025F79F /* ContatosViewController.swift */; };
@@ -43,8 +43,8 @@
 		83034B4B20FF6BAC004D305F /* Storyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storyboard.swift; sourceTree = "<group>"; };
 		83034B4C20FF6BAC004D305F /* Assets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
 		83034B4D20FF6BAC004D305F /* Localizable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Localizable.swift; sourceTree = "<group>"; };
-		83034B5220FF742F004D305F /* LoginRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequestFactory.swift; sourceTree = "<group>"; };
-		83034B5420FF7457004D305F /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
+		83034B5220FF742F004D305F /* AutenticacaoRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutenticacaoRequestFactory.swift; sourceTree = "<group>"; };
+		83034B5420FF7457004D305F /* AutenticacaoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutenticacaoService.swift; sourceTree = "<group>"; };
 		83277AA52100C2E50025F79F /* SessionControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionControl.swift; sourceTree = "<group>"; };
 		83277AA82100C48E0025F79F /* Contatos.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Contatos.storyboard; sourceTree = "<group>"; };
 		83277AAE2100C4EF0025F79F /* ContatosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContatosViewController.swift; sourceTree = "<group>"; };
@@ -136,8 +136,8 @@
 		83034B4120FF64EB004D305F /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				83034B5220FF742F004D305F /* LoginRequestFactory.swift */,
-				83034B5420FF7457004D305F /* LoginService.swift */,
+				83034B5220FF742F004D305F /* AutenticacaoRequestFactory.swift */,
+				83034B5420FF7457004D305F /* AutenticacaoService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -419,7 +419,7 @@
 				83034B4F20FF6BAC004D305F /* Storyboard.swift in Sources */,
 				83277AB32100CA6C0025F79F /* ContatoRequestFactory.swift in Sources */,
 				83F2917F20FE3A7400ACCCF9 /* ViewController.swift in Sources */,
-				83034B5320FF742F004D305F /* LoginRequestFactory.swift in Sources */,
+				83034B5320FF742F004D305F /* AutenticacaoRequestFactory.swift in Sources */,
 				B660B74421107DD600A9466C /* DetalheContatoViewController.swift in Sources */,
 				83034B4E20FF6BAC004D305F /* Colors.swift in Sources */,
 				834A35812102352500F83CDE /* AdicionarContatoViewController.swift in Sources */,
@@ -434,7 +434,7 @@
 				834A357E21021EE000F83CDE /* ContatoTableViewCell.swift in Sources */,
 				83277AB62100CA850025F79F /* ContatoService.swift in Sources */,
 				83F2917D20FE3A7400ACCCF9 /* AppDelegate.swift in Sources */,
-				83034B5520FF7457004D305F /* LoginService.swift in Sources */,
+				83034B5520FF7457004D305F /* AutenticacaoService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

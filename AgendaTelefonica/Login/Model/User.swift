@@ -52,5 +52,7 @@ extension User {
         if let accessToken = header["Access-Token"] as? String {
             self.accessToken = accessToken
         }
+        
+        SessionControl.setHeadersParams(headers: header)
     }
 }

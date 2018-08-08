@@ -93,13 +93,6 @@
                                     <action selector="confirmarEdicao:" destination="MVu-oX-wEQ" eventType="touchUpInside" id="I0b-Nf-osU"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PBT-nu-nuk">
-                                <rect key="frame" x="100" y="623" width="175" height="30"/>
-                                <state key="normal" title="Excluir"/>
-                                <connections>
-                                    <action selector="excluir:" destination="MVu-oX-wEQ" eventType="touchUpInside" id="Z3z-Ne-nQp"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -108,10 +101,8 @@
                             <constraint firstItem="9xR-og-5xB" firstAttribute="leading" secondItem="Sa9-ym-CCo" secondAttribute="leading" constant="70" id="71W-U5-kur"/>
                             <constraint firstItem="TqC-Fp-X9X" firstAttribute="leading" secondItem="Sa9-ym-CCo" secondAttribute="leading" constant="70" id="DcJ-Ii-eiZ"/>
                             <constraint firstItem="YlN-7p-TEV" firstAttribute="centerX" secondItem="M1w-Rz-pFh" secondAttribute="centerX" id="DhB-CX-eCo"/>
-                            <constraint firstItem="PBT-nu-nuk" firstAttribute="leading" secondItem="Sa9-ym-CCo" secondAttribute="leading" constant="100" id="Fgt-lw-ixG"/>
                             <constraint firstItem="Sa9-ym-CCo" firstAttribute="trailing" secondItem="koN-be-U6v" secondAttribute="trailing" constant="100" id="HXJ-P7-c2b"/>
                             <constraint firstItem="koN-be-U6v" firstAttribute="leading" secondItem="Sa9-ym-CCo" secondAttribute="leading" constant="100" id="Hni-Pg-TPh"/>
-                            <constraint firstItem="Sa9-ym-CCo" firstAttribute="trailing" secondItem="PBT-nu-nuk" secondAttribute="trailing" constant="100" id="IMb-dn-d6A"/>
                             <constraint firstItem="Sa9-ym-CCo" firstAttribute="trailing" secondItem="YlN-7p-TEV" secondAttribute="trailing" constant="70" id="Jyx-7V-wdc"/>
                             <constraint firstItem="TqC-Fp-X9X" firstAttribute="centerX" secondItem="M1w-Rz-pFh" secondAttribute="centerX" id="KF3-lB-FI6"/>
                             <constraint firstItem="Sa9-ym-CCo" firstAttribute="trailing" secondItem="TqC-Fp-X9X" secondAttribute="trailing" constant="70" id="Kxc-fB-9ge"/>
@@ -123,20 +114,17 @@
                             <constraint firstItem="Sa9-ym-CCo" firstAttribute="trailing" secondItem="UYv-3U-6NJ" secondAttribute="trailing" constant="70" id="dp7-AD-qQ0"/>
                             <constraint firstItem="UYv-3U-6NJ" firstAttribute="leading" secondItem="Sa9-ym-CCo" secondAttribute="leading" constant="70" id="gYb-ZM-mqg"/>
                             <constraint firstItem="PbJ-rN-6Ql" firstAttribute="leading" secondItem="Sa9-ym-CCo" secondAttribute="leading" constant="70" id="hw7-JH-Wnb"/>
-                            <constraint firstItem="PBT-nu-nuk" firstAttribute="top" secondItem="koN-be-U6v" secondAttribute="bottom" constant="48" id="i3R-bF-IET"/>
                             <constraint firstItem="PbJ-rN-6Ql" firstAttribute="top" secondItem="TqC-Fp-X9X" secondAttribute="bottom" constant="26" id="iSb-Sf-Mgt"/>
                             <constraint firstItem="9xR-og-5xB" firstAttribute="top" secondItem="UYv-3U-6NJ" secondAttribute="bottom" constant="26" id="ihI-Hx-WFg"/>
                             <constraint firstItem="UYv-3U-6NJ" firstAttribute="centerX" secondItem="M1w-Rz-pFh" secondAttribute="centerX" id="r3M-E4-ABW"/>
                             <constraint firstItem="koN-be-U6v" firstAttribute="top" secondItem="PbJ-rN-6Ql" secondAttribute="bottom" constant="80" id="rGk-Zv-fqT"/>
                             <constraint firstItem="9xR-og-5xB" firstAttribute="centerX" secondItem="M1w-Rz-pFh" secondAttribute="centerX" id="wHB-GD-yAt"/>
-                            <constraint firstItem="PBT-nu-nuk" firstAttribute="centerX" secondItem="M1w-Rz-pFh" secondAttribute="centerX" id="ybv-R7-deI"/>
                             <constraint firstItem="Sa9-ym-CCo" firstAttribute="trailing" secondItem="9xR-og-5xB" secondAttribute="trailing" constant="70" id="zey-Dd-4OB"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Sa9-ym-CCo"/>
                     </view>
                     <connections>
                         <outlet property="btnConfirmar" destination="koN-be-U6v" id="4gE-JC-3Rp"/>
-                        <outlet property="btnExcluir" destination="PBT-nu-nuk" id="e53-ar-bFq"/>
                         <outlet property="imagemContato" destination="UYv-3U-6NJ" id="ylr-CZ-rI0"/>
                         <outlet property="txtEmail" destination="YlN-7p-TEV" id="q2P-dI-RG9"/>
                         <outlet property="txtNome" destination="9xR-og-5xB" id="9mq-pV-pxQ"/>

@@ -26,7 +26,8 @@ class UserViewModel {
             
             let usuarios = uiRealm.objects(User.self)
             
-            uiRealm.delete(usuarios)
+//            uiRealm.delete(usuarios)
+            uiRealm.deleteAll()
         }
     }
     

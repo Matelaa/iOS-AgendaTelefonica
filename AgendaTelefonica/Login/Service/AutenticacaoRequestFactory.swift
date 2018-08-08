@@ -9,7 +9,7 @@
 import Foundation
 import Alamofire
 
-class LoginRequestFactory {
+class AutenticacaoRequestFactory {
     
     // Funcao criada para fazer a requisicao ao postman
     static func postLogin(email: String, senha: String) -> DataRequest {
@@ -21,6 +21,6 @@ class LoginRequestFactory {
     
     static func delLogout() -> DataRequest {
         
-        return Alamofire.request(baseUrl + "auth/sign_out", method: .delete, encoding: JSONEncoding.default, headers: header)
+        return Alamofire.request(baseUrl + "auth/sign_out", method: .delete, headers: header)
     }
 }
