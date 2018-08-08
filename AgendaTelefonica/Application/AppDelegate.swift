@@ -23,13 +23,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         print(Realm.Configuration.defaultConfiguration.fileURL?.absoluteString ?? "Não Criado")
         SessionControl.setHeadersParams()
         
+        // Verificar se o usuario esta logado ou nao
         if SessionControl.isSessionActive {
             
+            // Variavel criada para quando for para a tela de contatos a navigation bar poder aparacer, pois esta dizendo que a navigation controller sera a tela da tableview
+            // Vai para a tela de Contatos
             let contatosController = UINavigationController(rootViewController: StoryboardScene.Contatos.contatosViewController.instantiate())
             
             self.window?.rootViewController = contatosController
         } else {
             
+            // Vai para a tela de Login
             self.window?.rootViewController = StoryboardScene.Main.viewController.instantiate()
         }
         
