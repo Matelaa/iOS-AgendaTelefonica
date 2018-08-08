@@ -31,9 +31,9 @@
 		83F2917F20FE3A7400ACCCF9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F2917E20FE3A7400ACCCF9 /* ViewController.swift */; };
 		83F2918420FE3A7B00ACCCF9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83F2918320FE3A7B00ACCCF9 /* Assets.xcassets */; };
 		83F2918720FE3A7B00ACCCF9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83F2918520FE3A7B00ACCCF9 /* LaunchScreen.storyboard */; };
-		B60753862119C2B100E27463 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B60753842119C2B100E27463 /* Main.storyboard */; };
 		B61ADEBC2114ACF400A5C2D9 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61ADEBB2114ACF400A5C2D9 /* UserViewModel.swift */; };
 		B660B74421107DD600A9466C /* DetalheContatoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B660B74321107DD600A9466C /* DetalheContatoViewController.swift */; };
+		B6ED87D3211B18850001928A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6ED87D2211B18850001928A /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,9 +63,9 @@
 		83F2918620FE3A7B00ACCCF9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		83F2918820FE3A7B00ACCCF9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8471273067B67CBED1781775 /* Pods_AgendaTelefonica.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AgendaTelefonica.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B60753852119C2B100E27463 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = ../../../teste/AgendaTelefonica/Login/Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B61ADEBB2114ACF400A5C2D9 /* UserViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		B660B74321107DD600A9466C /* DetalheContatoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalheContatoViewController.swift; sourceTree = "<group>"; };
+		B6ED87D2211B18850001928A /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		CC4B4AA3BA9991A2FA834039 /* Pods-AgendaTelefonica.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AgendaTelefonica.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AgendaTelefonica/Pods-AgendaTelefonica.debug.xcconfig"; sourceTree = "<group>"; };
 		F82119A18AEAE5246D6A77B0 /* Pods-AgendaTelefonica.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AgendaTelefonica.release.xcconfig"; path = "Pods/Target Support Files/Pods-AgendaTelefonica/Pods-AgendaTelefonica.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -116,7 +116,7 @@
 		83034B3E20FF5D28004D305F /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				B60753842119C2B100E27463 /* Main.storyboard */,
+				B6ED87D2211B18850001928A /* Main.storyboard */,
 				83034B3F20FF64C5004D305F /* Model */,
 				B61ADEBA2114ACF400A5C2D9 /* ViewModel */,
 				83034B4120FF64EB004D305F /* Service */,
@@ -332,9 +332,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B60753862119C2B100E27463 /* Main.storyboard in Resources */,
 				834A357F21021EE000F83CDE /* ContatoTableViewCell.xib in Resources */,
 				83F2918720FE3A7B00ACCCF9 /* LaunchScreen.storyboard in Resources */,
+				B6ED87D3211B18850001928A /* Main.storyboard in Resources */,
 				83277AA92100C48E0025F79F /* Contatos.storyboard in Resources */,
 				83034B4820FF673C004D305F /* Colors.json in Resources */,
 				83034B4620FF66CC004D305F /* Localizable.strings in Resources */,
@@ -447,14 +447,6 @@
 				83F2918620FE3A7B00ACCCF9 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		B60753842119C2B100E27463 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B60753852119C2B100E27463 /* Base */,
-			);
-			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

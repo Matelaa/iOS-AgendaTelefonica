@@ -23,6 +23,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         print(Realm.Configuration.defaultConfiguration.fileURL?.absoluteString ?? "Não Criado")
         SessionControl.setHeadersParams()
         
+        if SessionControl.isSessionActive {
+            
+            let contatosController = UINavigationController(rootViewController: StoryboardScene.Contatos.contatosViewController.instantiate())
+            
+            self.window?.rootViewController = contatosController
+        } else {
+            
+            self.window?.rootViewController = StoryboardScene.Main.viewController.instantiate()
+        }
+        
+        self.window?.makeKeyAndVisible()
         return true
     }
 

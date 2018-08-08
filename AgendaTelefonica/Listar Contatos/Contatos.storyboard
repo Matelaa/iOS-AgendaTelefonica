@@ -13,7 +13,7 @@
         <!--Contatos View Controller-->
         <scene sceneID="x8c-qZ-k9S">
             <objects>
-                <viewController id="1vy-OW-msD" customClass="ContatosViewController" customModule="AgendaTelefonica" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ContatosViewController" id="1vy-OW-msD" customClass="ContatosViewController" customModule="AgendaTelefonica" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Agr-h0-qyh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

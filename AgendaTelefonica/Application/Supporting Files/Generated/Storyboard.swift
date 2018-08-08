@@ -54,6 +54,8 @@ internal enum StoryboardScene {
     internal static let storyboardName = "Contatos"
 
     internal static let initialScene = InitialSceneType<UINavigationController>(storyboard: Contatos.self)
+
+    internal static let contatosViewController = SceneType<AgendaTelefonica.ContatosViewController>(storyboard: Contatos.self, identifier: "ContatosViewController")
   }
   internal enum LaunchScreen: StoryboardType {
     internal static let storyboardName = "LaunchScreen"
@@ -64,6 +66,8 @@ internal enum StoryboardScene {
     internal static let storyboardName = "Main"
 
     internal static let initialScene = InitialSceneType<AgendaTelefonica.ViewController>(storyboard: Main.self)
+
+    internal static let viewController = SceneType<AgendaTelefonica.ViewController>(storyboard: Main.self, identifier: "ViewController")
   }
 }
 

@@ -100,7 +100,7 @@ extension ContatosViewController: UITableViewDataSource, UITableViewDelegate {
 
         let cell = tableView.dequeueReusableCell(for: indexPath) as ContatoTableViewCell
 
-        cell.rightButtons = [MGSwipeButton(title: "", icon: Asset.trash.image, backgroundColor: .red, padding: 25){
+        cell.rightButtons = [MGSwipeButton(title: "", icon: Asset.trash.image, backgroundColor: UIColor(red: 240/255, green: 77/255, blue: 77/255, alpha: 1), padding: 25){
             (sender: MGSwipeTableCell!) -> Bool in
             let deletado = self.contatos.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
@@ -108,9 +108,7 @@ extension ContatosViewController: UITableViewDataSource, UITableViewDelegate {
             self.service.delContato(id: deletado.id)
             return true
         }]
-        
-        cell.rightSwipeSettings.transition = .static
-
+        cell.rightSwipeSettings.transition = .rotate3D
         cell.bind(contato: self.contatos[indexPath.row])
 
         return cell
