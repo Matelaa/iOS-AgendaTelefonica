@@ -14,3 +14,4 @@ Blibliotecas:
 - SwiftGen
 - Reusable
 - Kingfisher
+- MGSwipeTableCell
