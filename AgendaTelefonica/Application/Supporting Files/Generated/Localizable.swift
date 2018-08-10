@@ -14,7 +14,9 @@ internal enum L10n {
   }
 
   internal enum Contatos {
-    /// Confirmar
+    /// Edicão Desabilitada
+    internal static let ativaredicao = L10n.tr("Localizable", "contatos.ativaredicao")
+    /// Confirmar Edicão
     internal static let confirmar = L10n.tr("Localizable", "contatos.confirmar")
     /// Criar
     internal static let criar = L10n.tr("Localizable", "contatos.criar")

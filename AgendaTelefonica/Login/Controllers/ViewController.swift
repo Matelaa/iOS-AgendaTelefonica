@@ -18,7 +18,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var txtEmail: UITextField!
     @IBOutlet weak var txtSenha: UITextField!
     @IBOutlet weak var btnEntrar: UIButton!
-    @IBOutlet weak var btnCadastrar: UIButton!
     
     // MARK: - Life
     override func viewDidLoad() {
@@ -29,7 +28,7 @@ class ViewController: UIViewController {
         self.imagemIcone.image = Asset.iconeTelefone.image
         
         self.txtEmail.text = "matela@gmail.com"
-        self.txtSenha.text = "12345678"
+        self.txtSenha.text = ""
         
         self.txtEmail.placeholder = L10n.Login.email
         self.txtSenha.placeholder = L10n.Login.senha
@@ -37,13 +36,6 @@ class ViewController: UIViewController {
         self.btnEntrar.setTitle(L10n.Login.entrar, for: .normal)
         self.btnEntrar.layer.cornerRadius = self.btnEntrar.bounds.height / 2
         self.btnEntrar.backgroundColor = UIColor(red: 173/255, green: 216/255, blue: 230/255, alpha: 1)
-        
-        self.btnCadastrar.setTitle(L10n.Login.cadastrar, for: .normal)
-        self.btnCadastrar.layer.cornerRadius = self.btnCadastrar.bounds.height / 2
-        self.btnCadastrar.backgroundColor = UIColor(red: 173/255, green: 216/255, blue: 230/255, alpha: 1)
-        
-        
-        
     }
     
     //
@@ -56,22 +48,17 @@ class ViewController: UIViewController {
             self.service.postLogin(email: email, senha: senha)
         }
     }
-    
-    @IBAction func cadastrar(_ sender: Any) {
-        
-    }
-    
 }
 
 // Caso o Login seja igual ao do Postman, ele ira continuar a aplicacao
 extension ViewController: AutenticacaoServiceDelegate {
     func delLogoutSuccess() {
         
-        print("veio aqui")
     }
     
     func delLogoutFailure(error: String) {
 
+        print(error)
     }
     
     func postLoginSuccess() {
@@ -80,6 +67,9 @@ extension ViewController: AutenticacaoServiceDelegate {
     }
     
     func postLoginFailure(error: String) {
-        print(error)
+        
+        let alert = UIAlertController(title: "Dados errados", message: "Voce digitou algum dado errado, tente novamente", preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
     }
 }

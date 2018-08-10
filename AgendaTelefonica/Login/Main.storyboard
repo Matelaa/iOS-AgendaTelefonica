@@ -40,13 +40,6 @@
                                     <action selector="entrar:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EpF-FL-sfi"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Kh-Bw-DGn">
-                                <rect key="frame" x="70" y="472" width="235" height="30"/>
-                                <state key="normal" title="Cadastrar"/>
-                                <connections>
-                                    <action selector="cadastrar:" destination="BYZ-38-t0r" eventType="touchUpInside" id="h3v-kk-6dd"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -57,17 +50,13 @@
                             <constraint firstItem="396-DV-5dF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="K0C-rz-kTC"/>
                             <constraint firstItem="elh-hC-wRU" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="80" id="MOh-eb-hHf"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="elh-hC-wRU" secondAttribute="bottom" constant="450" id="QDG-xt-w7S"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9Kh-Bw-DGn" secondAttribute="trailing" constant="70" id="WX9-5Q-w5I"/>
                             <constraint firstItem="lCR-8X-mI0" firstAttribute="top" secondItem="liA-d4-FCF" secondAttribute="bottom" constant="20" id="YXJ-l3-hRM"/>
                             <constraint firstItem="elh-hC-wRU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eWu-ht-iDG"/>
-                            <constraint firstItem="9Kh-Bw-DGn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mZe-p3-ueb"/>
-                            <constraint firstItem="9Kh-Bw-DGn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="70" id="mgg-LE-1VG"/>
                             <constraint firstItem="396-DV-5dF" firstAttribute="top" secondItem="lCR-8X-mI0" secondAttribute="bottom" constant="35" id="nOi-53-sRz"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lCR-8X-mI0" secondAttribute="trailing" constant="50" id="rGT-PO-tS1"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="liA-d4-FCF" secondAttribute="trailing" constant="50" id="roB-xG-F4X"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="396-DV-5dF" secondAttribute="trailing" constant="70" id="sQG-hd-kI0"/>
                             <constraint firstItem="liA-d4-FCF" firstAttribute="top" secondItem="elh-hC-wRU" secondAttribute="bottom" constant="90" id="tHu-WR-kKz"/>
-                            <constraint firstItem="9Kh-Bw-DGn" firstAttribute="top" secondItem="396-DV-5dF" secondAttribute="bottom" constant="20" id="tMi-F5-1OQ"/>
                             <constraint firstAttribute="trailing" secondItem="elh-hC-wRU" secondAttribute="trailing" constant="80" id="tsD-2a-UzM"/>
                             <constraint firstItem="elh-hC-wRU" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="46" id="uMd-e9-icn"/>
                             <constraint firstItem="lCR-8X-mI0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yHo-5L-TUX"/>
@@ -75,7 +64,6 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="btnCadastrar" destination="9Kh-Bw-DGn" id="6Hb-2e-HwE"/>
                         <outlet property="btnEntrar" destination="396-DV-5dF" id="mhI-qx-fxT"/>
                         <outlet property="imagemIcone" destination="elh-hC-wRU" id="eV2-uj-6ZQ"/>
                         <outlet property="txtEmail" destination="liA-d4-FCF" id="DIq-Ki-iMc"/>

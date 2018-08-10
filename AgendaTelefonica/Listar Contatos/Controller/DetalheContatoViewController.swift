@@ -46,8 +46,9 @@ class DetalheContatoViewController: UIViewController {
         txtEmail.isEnabled = false
         txtTelefone.isEnabled = false
         txtUrl.isEnabled = false
-        
-        self.btnConfirmar.setTitle(L10n.Contatos.confirmar, for: .normal)
+        btnConfirmar.isEnabled = false
+    
+        self.btnConfirmar.setTitle(L10n.Contatos.ativaredicao, for: .normal)
         self.btnConfirmar.layer.cornerRadius = self.btnConfirmar.bounds.height / 2
         self.btnConfirmar.backgroundColor = UIColor(red: 173/255, green: 216/255, blue: 230/255, alpha: 1)
         
@@ -63,6 +64,8 @@ class DetalheContatoViewController: UIViewController {
         txtEmail.isEnabled = true
         txtTelefone.isEnabled = true
         txtUrl.isEnabled = true
+        btnConfirmar.isEnabled = true
+        btnConfirmar.setTitle(L10n.Contatos.confirmar, for: .normal)
     }
     
     // Funcao para editar um determinado contato, passando como parametro seu ID para editar no banco suas informacoes

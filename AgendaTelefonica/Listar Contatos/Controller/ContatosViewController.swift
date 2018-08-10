@@ -43,12 +43,12 @@ class ContatosViewController: UIViewController {
     
     @objc func deslogar() {
         
-        let logoutAlert = UIAlertController(title: "Logout", message: "Tem certeza que deseja sair?", preferredStyle: UIAlertControllerStyle.alert)
+        let logoutAlert = UIAlertController(title: "Sair", message: "Tem certeza que deseja sair?", preferredStyle: UIAlertControllerStyle.alert)
         
-        logoutAlert.addAction(UIAlertAction(title: "Cancel", style: .destructive, handler: { (action: UIAlertAction!) in
+        logoutAlert.addAction(UIAlertAction(title: "Cancelar", style: .destructive, handler: { (action: UIAlertAction!) in
         }))
         
-        logoutAlert.addAction(UIAlertAction(title: "Confirm", style: .default, handler: { (action: UIAlertAction!) in
+        logoutAlert.addAction(UIAlertAction(title: "Confirmar", style: .default, handler: { (action: UIAlertAction!) in
             
             self.serviceAutent.Logout()
         }))
@@ -62,6 +62,7 @@ class ContatosViewController: UIViewController {
         super.viewWillAppear(animated)
         
         self.service.getContatos()
+        tableView.reloadData()
     }
     
     // funcao criada para passar para a tela de detalhe o id daquele certo contato
@@ -123,8 +124,9 @@ extension ContatosViewController: AutenticacaoServiceDelegate {
             // 
             let contatosController = UINavigationController(rootViewController: StoryboardScene.Contatos.contatosViewController.instantiate())
 
-            UIApplication.shared.keyWindow?.rootViewController = contatosController
-
+            self.present(contatosController, animated: true) {
+                UIApplication.shared.keyWindow?.rootViewController = contatosController
+            }
 
         } else {
 
@@ -166,7 +168,7 @@ extension ContatosViewController: UITableViewDataSource, UITableViewDelegate {
             self.service.delContato(id: deletado.id)
             return true
         }]
-        
+
         cell.rightSwipeSettings.transition = .static
         cell.bind(contato: self.contatos[indexPath.row])
 

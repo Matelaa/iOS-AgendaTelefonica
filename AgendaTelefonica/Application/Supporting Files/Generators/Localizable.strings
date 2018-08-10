@@ -12,8 +12,8 @@
 "contatos.telefone" = "Telefone";
 "contatos.urlimagem" = "URL Imagem";
 "contatos.criar" = "Criar";
-"contatos.confirmar" = "Confirmar";
+"contatos.confirmar" = "Confirmar Edicão";
+"contatos.ativaredicao" = "Edicão Desabilitada";
 "contatos.editar" = "Editar";
 "contatos.excluir" = "Excluir";
 "contatos.deslogar" = "Deslogar";
-
