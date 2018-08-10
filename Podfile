@@ -12,5 +12,6 @@ pod 'RealmSwift'
 pod 'Reusable'
 pod 'Kingfisher'
 pod 'MGSwipeTableCell'
+pod 'SwiftMessages'
 
 end

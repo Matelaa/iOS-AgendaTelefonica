@@ -40,17 +40,29 @@
                                     <action selector="entrar:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EpF-FL-sfi"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IwX-I6-NBc">
+                                <rect key="frame" x="70" y="487" width="235" height="30"/>
+                                <state key="normal" title="Cadastrar"/>
+                                <connections>
+                                    <action selector="cadastrar:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yYO-zv-s6r"/>
+                                    <segue destination="DuE-Uv-Lr3" kind="show" id="Nku-ax-phl"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="liA-d4-FCF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="2jc-w7-wOV"/>
                             <constraint firstItem="lCR-8X-mI0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="78l-J3-sHH"/>
+                            <constraint firstItem="IwX-I6-NBc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8yj-Ba-EhN"/>
                             <constraint firstItem="396-DV-5dF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="70" id="DE7-t8-fSY"/>
                             <constraint firstItem="liA-d4-FCF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HhR-3R-ceI"/>
                             <constraint firstItem="396-DV-5dF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="K0C-rz-kTC"/>
                             <constraint firstItem="elh-hC-wRU" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="80" id="MOh-eb-hHf"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="elh-hC-wRU" secondAttribute="bottom" constant="450" id="QDG-xt-w7S"/>
+                            <constraint firstItem="IwX-I6-NBc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="70" id="T4U-6Z-1vu"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="IwX-I6-NBc" secondAttribute="trailing" constant="70" id="VLN-qA-f6T"/>
                             <constraint firstItem="lCR-8X-mI0" firstAttribute="top" secondItem="liA-d4-FCF" secondAttribute="bottom" constant="20" id="YXJ-l3-hRM"/>
+                            <constraint firstItem="IwX-I6-NBc" firstAttribute="top" secondItem="396-DV-5dF" secondAttribute="bottom" constant="35" id="cDs-aq-ZNI"/>
                             <constraint firstItem="elh-hC-wRU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eWu-ht-iDG"/>
                             <constraint firstItem="396-DV-5dF" firstAttribute="top" secondItem="lCR-8X-mI0" secondAttribute="bottom" constant="35" id="nOi-53-sRz"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lCR-8X-mI0" secondAttribute="trailing" constant="50" id="rGT-PO-tS1"/>
@@ -64,6 +76,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="btnCadastrar" destination="IwX-I6-NBc" id="cJq-EA-J7g"/>
                         <outlet property="btnEntrar" destination="396-DV-5dF" id="mhI-qx-fxT"/>
                         <outlet property="imagemIcone" destination="elh-hC-wRU" id="eV2-uj-6ZQ"/>
                         <outlet property="txtEmail" destination="liA-d4-FCF" id="DIq-Ki-iMc"/>
@@ -74,6 +87,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="24.800000000000001" y="31.934032983508249"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Pk1-b2-Ygd">
+            <objects>
+                <viewController id="DuE-Uv-Lr3" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="N4Y-ak-twy">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="dN0-Jy-2YX"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Mj-XX-6oE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="25" y="760"/>
         </scene>
         <!--Contatos-->
         <scene sceneID="MIt-Ae-3uD">

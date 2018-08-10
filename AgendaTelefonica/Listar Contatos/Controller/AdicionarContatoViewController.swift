@@ -8,6 +8,7 @@
 
 import UIKit
 import RealmSwift
+import SwiftMessages
 
 class AdicionarContatoViewController: UIViewController {
 
@@ -50,11 +51,23 @@ class AdicionarContatoViewController: UIViewController {
         
             self.service.postContatos(nomeContato: nomeSalvar, aniversarioContato: 0, emailContato: emailSalvar, telefoneContato: telefoneSalvar, urlImagemContato: urlSalvar)
             
-            let alert = UIAlertController(title: "Contato Criado", message: "O contato \(nomeSalvar) foi criado com sucesso", preferredStyle: UIAlertControllerStyle.alert)
-            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
+            let view = MessageView.viewFromNib(layout: .cardView)
             
-            self.present(alert, animated: true, completion: nil)
+            // Theme message elements with the warning style.
+            view.configureTheme(.success)
             
+            // Add a drop shadow.
+            view.configureDropShadow()
+            
+            // Set message title, body, and icon. Here, we're overriding the default warning
+            view.configureContent(title: "Contato Criado", body: "O contato \(nomeSalvar) foi criado com sucesso")
+            // Show the message.
+            view.buttonTapHandler = {
+                _ in SwiftMessages.hide()
+            }
+            SwiftMessages.show(view: view)
+            
+            self.navigationController?.popToRootViewController(animated: true)
         }
     }
 }

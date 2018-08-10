@@ -8,6 +8,7 @@
 
 import UIKit
 import RealmSwift
+import SwiftMessages
 
 class DetalheContatoViewController: UIViewController {
     
@@ -73,9 +74,24 @@ class DetalheContatoViewController: UIViewController {
         
         self.service.putEditarContato(id: id, edicaoNome: txtNome.text!, edicaoAniversario: 0, edicaoEmail: txtEmail.text!, edicaoTelefone: txtTelefone.text!, edicaoUrlImagem: txtUrl.text!)
         
-        let alert = UIAlertController(title: "Contato Editado", message: "O contato \(self.txtNome.text!) foi editado com sucesso", preferredStyle: UIAlertControllerStyle.alert)
-        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
-        self.present(alert, animated: true, completion: nil)
+        let view = MessageView.viewFromNib(layout: .cardView)
+        
+        // Theme message elements with the warning style.
+        view.configureTheme(.warning)
+        
+        // Add a drop shadow.
+        view.configureDropShadow()
+        
+        // Set message title, body, and icon. Here, we're overriding the default warning
+//        view.configureContent(title: "Contato Editado", body: "O contato \(self.txtNome.text!) foi editado com sucesso", buttonImage: nil, buttonTitle: nil)
+        view.configureContent(title: "Contato Editado", body: "O contato \(self.txtNome.text!) foi editado com sucesso", iconImage: nil, iconText: nil, buttonImage: nil, buttonTitle: nil, buttonTapHandler: { _ in SwiftMessages.hide() })
+        // Show the message.
+//        view.buttonTapHandler = {
+//            _ in SwiftMessages.hide()
+//        }
+        SwiftMessages.show(view: view)
+        
+        self.navigationController?.popToRootViewController(animated: true)
         
     }
 }
