@@ -77,6 +77,7 @@ internal enum StoryboardSegue {
     case segueDetalhe
   }
   internal enum Main: String, SegueType {
+    case segueCadastro
     case segueEntrar
   }
 }

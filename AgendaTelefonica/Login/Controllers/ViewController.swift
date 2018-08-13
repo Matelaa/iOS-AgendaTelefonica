@@ -56,6 +56,7 @@ class ViewController: UIViewController {
     }
     @IBAction func cadastrar(_ sender: Any) {
     
+        self.perform(segue: StoryboardSegue.Main.segueCadastro)
     }
 }
 
@@ -91,6 +92,7 @@ extension ViewController: AutenticacaoServiceDelegate {
         
         // Set message title, body, and icon. Here, we're overriding the default warning
         view.configureContent(title: "Dados errados", body: "Digite novamente seu e-mail ou senha")
+        view.button?.isHidden = true
         var config = SwiftMessages.defaultConfig
         config.duration = .automatic
         // Show the message.

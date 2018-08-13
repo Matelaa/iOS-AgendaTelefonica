@@ -13,5 +13,6 @@ pod 'Reusable'
 pod 'Kingfisher'
 pod 'MGSwipeTableCell'
 pod 'SwiftMessages'
+pod 'SwiftLint'
 
 end

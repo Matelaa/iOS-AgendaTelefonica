@@ -45,7 +45,7 @@
                                 <state key="normal" title="Cadastrar"/>
                                 <connections>
                                     <action selector="cadastrar:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yYO-zv-s6r"/>
-                                    <segue destination="DuE-Uv-Lr3" kind="show" id="Nku-ax-phl"/>
+                                    <segue destination="DuE-Uv-Lr3" kind="show" identifier="segueCadastro" id="Nku-ax-phl"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -88,16 +88,69 @@
             </objects>
             <point key="canvasLocation" x="24.800000000000001" y="31.934032983508249"/>
         </scene>
-        <!--View Controller-->
+        <!--Cadastro View Controller-->
         <scene sceneID="Pk1-b2-Ygd">
             <objects>
-                <viewController id="DuE-Uv-Lr3" sceneMemberID="viewController">
+                <viewController id="DuE-Uv-Lr3" customClass="CadastroViewController" customModule="AgendaTelefonica" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="N4Y-ak-twy">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E-Mail" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="czn-aq-bfz">
+                                <rect key="frame" x="42" y="236" width="291" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Senha" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="r1b-1H-5XI">
+                                <rect key="frame" x="42" y="296" width="291" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirmar Senha" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UZn-sp-QV3">
+                                <rect key="frame" x="42" y="356" width="291" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fjS-Mh-7S5">
+                                <rect key="frame" x="64" y="450" width="247" height="30"/>
+                                <state key="normal" title="Cadastrar"/>
+                                <connections>
+                                    <action selector="cadastrar:" destination="DuE-Uv-Lr3" eventType="touchUpInside" id="XMv-FK-TPl"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="czn-aq-bfz" firstAttribute="centerX" secondItem="N4Y-ak-twy" secondAttribute="centerX" id="2pT-qA-Roe"/>
+                            <constraint firstItem="czn-aq-bfz" firstAttribute="top" secondItem="dN0-Jy-2YX" secondAttribute="top" constant="216" id="9KV-pj-I59"/>
+                            <constraint firstItem="fjS-Mh-7S5" firstAttribute="centerX" secondItem="N4Y-ak-twy" secondAttribute="centerX" id="HrA-9d-VFy"/>
+                            <constraint firstItem="UZn-sp-QV3" firstAttribute="centerX" secondItem="N4Y-ak-twy" secondAttribute="centerX" id="JWf-16-FQv"/>
+                            <constraint firstItem="dN0-Jy-2YX" firstAttribute="trailing" secondItem="fjS-Mh-7S5" secondAttribute="trailing" constant="64" id="MRS-Rb-pAB"/>
+                            <constraint firstItem="czn-aq-bfz" firstAttribute="leading" secondItem="dN0-Jy-2YX" secondAttribute="leading" constant="42" id="NnX-l3-NBV"/>
+                            <constraint firstItem="UZn-sp-QV3" firstAttribute="top" secondItem="r1b-1H-5XI" secondAttribute="bottom" constant="30" id="R5z-Wp-Dsu"/>
+                            <constraint firstItem="fjS-Mh-7S5" firstAttribute="top" secondItem="UZn-sp-QV3" secondAttribute="bottom" constant="64" id="SNu-m9-O8r"/>
+                            <constraint firstItem="fjS-Mh-7S5" firstAttribute="leading" secondItem="dN0-Jy-2YX" secondAttribute="leading" constant="64" id="Wkf-Fk-xnB"/>
+                            <constraint firstItem="dN0-Jy-2YX" firstAttribute="trailing" secondItem="UZn-sp-QV3" secondAttribute="trailing" constant="42" id="coA-eT-egH"/>
+                            <constraint firstItem="UZn-sp-QV3" firstAttribute="leading" secondItem="dN0-Jy-2YX" secondAttribute="leading" constant="42" id="djx-Jg-wcJ"/>
+                            <constraint firstItem="dN0-Jy-2YX" firstAttribute="trailing" secondItem="czn-aq-bfz" secondAttribute="trailing" constant="42" id="fsQ-KX-SgF"/>
+                            <constraint firstItem="UZn-sp-QV3" firstAttribute="centerX" secondItem="N4Y-ak-twy" secondAttribute="centerX" id="iVF-ky-bgg"/>
+                            <constraint firstItem="r1b-1H-5XI" firstAttribute="centerX" secondItem="N4Y-ak-twy" secondAttribute="centerX" id="jCV-NY-iXq"/>
+                            <constraint firstItem="dN0-Jy-2YX" firstAttribute="trailing" secondItem="r1b-1H-5XI" secondAttribute="trailing" constant="42" id="p1H-jO-HiG"/>
+                            <constraint firstItem="r1b-1H-5XI" firstAttribute="centerX" secondItem="N4Y-ak-twy" secondAttribute="centerX" id="qJz-G1-hgl"/>
+                            <constraint firstItem="r1b-1H-5XI" firstAttribute="leading" secondItem="dN0-Jy-2YX" secondAttribute="leading" constant="42" id="rhX-CC-5gS"/>
+                            <constraint firstItem="r1b-1H-5XI" firstAttribute="top" secondItem="czn-aq-bfz" secondAttribute="bottom" constant="30" id="sdg-xf-5lD"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="dN0-Jy-2YX"/>
                     </view>
+                    <connections>
+                        <outlet property="btnCadastrar" destination="fjS-Mh-7S5" id="ug5-wd-nd3"/>
+                        <outlet property="txtConfrmarSenha" destination="UZn-sp-QV3" id="7yL-my-QR4"/>
+                        <outlet property="txtEmail" destination="czn-aq-bfz" id="IhE-Hs-uSf"/>
+                        <outlet property="txtSenha" destination="r1b-1H-5XI" id="NKD-gB-VQZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Mj-XX-6oE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

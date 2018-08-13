@@ -85,6 +85,7 @@ class DetalheContatoViewController: UIViewController {
         // Set message title, body, and icon. Here, we're overriding the default warning
 //        view.configureContent(title: "Contato Editado", body: "O contato \(self.txtNome.text!) foi editado com sucesso", buttonImage: nil, buttonTitle: nil)
         view.configureContent(title: "Contato Editado", body: "O contato \(self.txtNome.text!) foi editado com sucesso", iconImage: nil, iconText: nil, buttonImage: nil, buttonTitle: nil, buttonTapHandler: { _ in SwiftMessages.hide() })
+        view.button?.isHidden = true
         // Show the message.
 //        view.buttonTapHandler = {
 //            _ in SwiftMessages.hide()

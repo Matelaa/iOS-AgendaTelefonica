@@ -61,13 +61,14 @@ class AdicionarContatoViewController: UIViewController {
             
             // Set message title, body, and icon. Here, we're overriding the default warning
             view.configureContent(title: "Contato Criado", body: "O contato \(nomeSalvar) foi criado com sucesso")
+            view.button?.isHidden = true
             // Show the message.
             view.buttonTapHandler = {
                 _ in SwiftMessages.hide()
             }
             SwiftMessages.show(view: view)
             
-            self.navigationController?.popToRootViewController(animated: true)
+//            self.navigationController?.popToRootViewController(animated: true)
         }
     }
 }

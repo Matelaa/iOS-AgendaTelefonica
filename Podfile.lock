@@ -17,6 +17,7 @@ PODS:
   - Reusable/Storyboard (4.0.2)
   - Reusable/View (4.0.2)
   - SwiftGen (5.3.0)
+  - SwiftLint (0.26.0)
   - SwiftMessages (4.1.4):
     - SwiftMessages/App (= 4.1.4)
   - SwiftMessages/App (4.1.4)
@@ -30,6 +31,7 @@ DEPENDENCIES:
   - RealmSwift
   - Reusable
   - SwiftGen
+  - SwiftLint
   - SwiftMessages
 
 SPEC REPOS:
@@ -43,6 +45,7 @@ SPEC REPOS:
     - RealmSwift
     - Reusable
     - SwiftGen
+    - SwiftLint
     - SwiftMessages
 
 SPEC CHECKSUMS:
@@ -55,8 +58,9 @@ SPEC CHECKSUMS:
   RealmSwift: a45861b21c180f5cf0f122144b9759fa8dde3e9e
   Reusable: 584a5629747c52e0f6a77841b400dc2643f6fa0f
   SwiftGen: 4379bd3640b0a212a0f6ea3c494adba385513d10
+  SwiftLint: f6b83e8d95ee1e91e11932d843af4fdcbf3fc764
   SwiftMessages: 2c33fdee8b8f38dfc7e1036684456b505891da8c
 
-PODFILE CHECKSUM: 051657e7fb7419657b700b35cd66c61a0d0d77fd
+PODFILE CHECKSUM: 0bb1e5661db0da0139f88ce16789693d44507654
 
 COCOAPODS: 1.5.3

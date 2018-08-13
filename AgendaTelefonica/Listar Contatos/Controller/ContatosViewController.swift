@@ -45,15 +45,14 @@ class ContatosViewController: UIViewController {
         
         let logoutAlert = UIAlertController(title: "Sair", message: "Tem certeza que deseja sair?", preferredStyle: UIAlertControllerStyle.alert)
         
-        logoutAlert.addAction(UIAlertAction(title: "Cancelar", style: .destructive, handler: { (action: UIAlertAction!) in
-        }))
+        logoutAlert.addAction(UIAlertAction(title: "Cancelar", style: .destructive))
         
         logoutAlert.addAction(UIAlertAction(title: "Confirmar", style: .default, handler: { (action: UIAlertAction!) in
             
             self.serviceAutent.Logout()
         }))
         
-        present(logoutAlert, animated: true, completion: nil)
+        self.present(logoutAlert, animated: true, completion: nil)
         
     }
     
@@ -62,7 +61,6 @@ class ContatosViewController: UIViewController {
         super.viewWillAppear(animated)
         
         self.service.getContatos()
-        tableView.reloadData()
     }
     
     // funcao criada para passar para a tela de detalhe o id daquele certo contato
@@ -86,13 +84,6 @@ class ContatosViewController: UIViewController {
 }
 
 extension ContatosViewController: ContatoServiceDelegate {
-    func criarContatoSuccess() {
-        
-    }
-    
-    func criarContatoFailure(error: String) {
-        
-    }
     
     func getContatosSuccess() {
         
@@ -103,18 +94,10 @@ extension ContatosViewController: ContatoServiceDelegate {
     func getContatosFailure(error: String) {
         
     }
-    
 }
 
 extension ContatosViewController: AutenticacaoServiceDelegate {
-    func postLoginSuccess() {
-        
-    }
-    
-    func postLoginFailure(error: String) {
-        
-    }
-    
+   
     func delLogoutSuccess() {
         
         if SessionControl.isSessionActive {

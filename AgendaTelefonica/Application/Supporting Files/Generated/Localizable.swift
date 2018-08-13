@@ -49,6 +49,15 @@ internal enum L10n {
     internal static let entrar = L10n.tr("Localizable", "login.entrar")
     /// Senha
     internal static let senha = L10n.tr("Localizable", "login.senha")
+
+    internal enum Cadastrar {
+      /// Confirmar Senha
+      internal static let confirmarsenha = L10n.tr("Localizable", "login.cadastrar.confirmarsenha")
+      /// E-Mail
+      internal static let email = L10n.tr("Localizable", "login.cadastrar.email")
+      /// Senha
+      internal static let senha = L10n.tr("Localizable", "login.cadastrar.senha")
+    }
   }
 }
 // swiftlint:enable explicit_type_interface identifier_name line_length nesting type_body_length type_name

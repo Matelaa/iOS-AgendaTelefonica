@@ -19,6 +19,29 @@ protocol ContatoServiceDelegate {
     func criarContatoFailure(error: String)
 }
 
+extension ContatoServiceDelegate {
+    
+    func getContatoSuccess() {
+    
+        fatalError("Fatal")
+    }
+    
+    func getContatosFailure(error: String) {
+        
+        fatalError("Fatal")
+    }
+    
+    func criarContatoSuccess() {
+        
+        fatalError("Fatal")
+    }
+    
+    func criarContatoFailure(error: String) {
+        
+        fatalError("Fatal")
+    }
+}
+
 class ContatoService {
     
     

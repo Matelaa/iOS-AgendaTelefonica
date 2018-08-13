@@ -23,4 +23,11 @@ class AutenticacaoRequestFactory {
         
         return Alamofire.request(baseUrl + "auth/sign_out", method: .delete, headers: header)
     }
+    
+    static func postUser(email: String, senha: String, confirmarSenha: String) -> DataRequest {
+        
+        let params: Parameters = ["email": email, "password": senha, "password_confirmation": confirmarSenha]
+        
+        return Alamofire.request(baseUrl + "auth", method: .post, parameters: params, encoding: JSONEncoding.default)
+    }
 }
